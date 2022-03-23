@@ -1,0 +1,67 @@
+variables:
+  GIT_STRATEGY: clone
+
+stages:
+  - Build Dev Docker Image
+  - Deploy Dev
+  - Build Prod Docker Image
+  - Deploy Production
+
+dockerconcordcidev:
+  dependencies: []
+  stage: Build Dev Docker Image
+  script:
+    - "$(aws ecr get-login --no-include-email --region ca-central-1)"
+    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest || true"
+    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="development" -t concordsky-dev .'
+    - "docker tag concordsky-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:$CI_COMMIT_SHA && docker tag concordsky-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest"
+    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest"
+  tags:
+    - concord_dev
+  only:
+    - dev@web/concordsky.ca
+
+dockerconcordcidevpath:
+  dependencies: []
+  stage: Build Dev Docker Image
+  script:
+    - "$(aws ecr get-login --no-include-email --region ca-central-1)"
+    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest || true"
+    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="development" --build-arg APP_PATH="/residential/toronto-gta/property-for-sale/concordsky" -t concordsky-path-dev .'
+    - "docker tag concordsky-path-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:path$CI_COMMIT_SHA && docker tag concordsky-path-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest"
+    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:path$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest"
+  tags:
+    - concord_dev
+  only:
+    - dev@web/concordsky.ca
+
+dockerprod:
+  dependencies: []
+  stage: Build Prod Docker Image
+  script:
+    - "$(aws ecr get-login --no-include-email --region ca-central-1)"
+    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest || true"
+    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="production" -t concordsky-prod .'
+    - "docker tag concordsky-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA && docker tag concordsky-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest"
+    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest"
+  when: manual
+  tags:
+    - concord_prod
+  only:
+    - dev@web/concordsky.ca
+
+Deploy Production:
+  variables:
+    GIT_STRATEGY: none
+  dependencies: []
+  stage: Deploy Production
+  script:
+    - echo "Do this manually for now"
+    - echo "kubectl set image deployment/concordsky-prod concordsky-prod=406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA"
+    - "false"
+  when: manual
+  tags:
+    - concord_prod
+  only:
+    - dev@web/concordsky.ca
+  environment: production
