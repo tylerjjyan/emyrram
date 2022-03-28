@@ -19,7 +19,7 @@ dockerconcordcidev:
   tags:
     - concord_dev
   only:
-    - dev@web/clubkitchen.ca
+    - dev@web/club-kitchen
 
 dockerprod:
   dependencies: []
@@ -34,7 +34,7 @@ dockerprod:
   tags:
     - concord_prod
   only:
-    - dev@web/clubkitchen.ca
+    - dev@web/club-kitchen
 
 Deploy Production:
   variables:
@@ -49,5 +49,5 @@ Deploy Production:
   tags:
     - concord_prod
   only:
-    - dev@web/clubkitchen.ca
+    - dev@web/club-kitchen
   environment: production
