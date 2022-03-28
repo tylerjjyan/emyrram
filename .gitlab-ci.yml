@@ -12,43 +12,29 @@ dockerconcordcidev:
   stage: Build Dev Docker Image
   script:
     - "$(aws ecr get-login --no-include-email --region ca-central-1)"
-    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest || true"
-    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="development" -t concordsky-dev .'
-    - "docker tag concordsky-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:$CI_COMMIT_SHA && docker tag concordsky-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest"
-    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:latest"
+    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:latest || true"
+    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="development" -t clubkitchen-dev .'
+    - "docker tag clubkitchen-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:$CI_COMMIT_SHA && docker tag clubkitchen-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:latest"
+    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-dev:latest"
   tags:
     - concord_dev
   only:
-    - dev@web/concordsky.ca
-
-dockerconcordcidevpath:
-  dependencies: []
-  stage: Build Dev Docker Image
-  script:
-    - "$(aws ecr get-login --no-include-email --region ca-central-1)"
-    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest || true"
-    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="development" --build-arg APP_PATH="/residential/toronto-gta/property-for-sale/concordsky" -t concordsky-path-dev .'
-    - "docker tag concordsky-path-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:path$CI_COMMIT_SHA && docker tag concordsky-path-dev 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest"
-    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:path$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-dev:pathlatest"
-  tags:
-    - concord_dev
-  only:
-    - dev@web/concordsky.ca
+    - dev@web/clubkitchen.ca
 
 dockerprod:
   dependencies: []
   stage: Build Prod Docker Image
   script:
     - "$(aws ecr get-login --no-include-email --region ca-central-1)"
-    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest || true"
-    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="production" -t concordsky-prod .'
-    - "docker tag concordsky-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA && docker tag concordsky-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest"
-    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:latest"
+    - "docker pull 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:latest || true"
+    - 'docker build --cache-from 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:latest --build-arg NODE_ENV="production" --build-arg BUILD_ENV="production" -t clubkitchen-prod .'
+    - "docker tag clubkitchen-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:$CI_COMMIT_SHA && docker tag clubkitchen-prod 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:latest"
+    - "docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:$CI_COMMIT_SHA && docker push 406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:latest"
   when: manual
   tags:
     - concord_prod
   only:
-    - dev@web/concordsky.ca
+    - dev@web/clubkitchen.ca
 
 Deploy Production:
   variables:
@@ -57,11 +43,11 @@ Deploy Production:
   stage: Deploy Production
   script:
     - echo "Do this manually for now"
-    - echo "kubectl set image deployment/concordsky-prod concordsky-prod=406865557654.dkr.ecr.ca-central-1.amazonaws.com/concordsky-prod:$CI_COMMIT_SHA"
+    - echo "kubectl set image deployment/clubkitchen-prod clubkitchen-prod=406865557654.dkr.ecr.ca-central-1.amazonaws.com/clubkitchen-prod:$CI_COMMIT_SHA"
     - "false"
   when: manual
   tags:
     - concord_prod
   only:
-    - dev@web/concordsky.ca
+    - dev@web/clubkitchen.ca
   environment: production
