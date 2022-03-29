@@ -9,18 +9,10 @@ const withVanillaExtract = createVanillaExtractPlugin()
 const nextConfig = {
   webpack5: true,
   i18n,
-  redirects: async () => {
-    return [
-      {
-        source: '/gallery',
-        destination: '/404',
-        permanent: false
-      }
-    ]
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
+      issuer: { and: [/\.(js|ts|md)x?$/] },
       use: [
         {
           loader: '@svgr/webpack'

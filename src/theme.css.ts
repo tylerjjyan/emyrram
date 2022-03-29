@@ -4,7 +4,7 @@ export const vars = createGlobalTheme(':root', {
   colors: {
     background: {
       white: '#FFFFFF',
-      light: '#F5F7FA',
+      light: '#F8F8F8',
       dark: '#303030',
       darkest: '#28292B'
     },
@@ -13,17 +13,21 @@ export const vars = createGlobalTheme(':root', {
       medium: '#92A2B6',
       light: '#C5D0D5'
     },
+    neutral5: '#F8F8F8',
+    neutral10: '#EEEDED',
+    neutral50: '#A6A2A6',
+    neutral60: '#817E81',
+    neutral80: '#2A2A2E',
     black: '#000000',
-    regular: '#222223',
     transparent: 'transparent',
     pureWhite: '#FFFFFF',
-    error: '#FF6A5F'
+    error: '#DC1D1D'
   },
   fonts: {
     heading: 'haboro-contrast-condensed',
     body: 'neue-haas-unica'
   },
-  fontSizes: {
+  lineHeights: {
     xSmall: '16px',
     small: '20px',
     medium: '24px',
@@ -35,7 +39,7 @@ export const vars = createGlobalTheme(':root', {
     h2: '56px',
     h1: '64px'
   },
-  lineHeights: {
+  fontSizes: {
     xSmall: '12px',
     small: '14px',
     medium: '16px',
@@ -68,7 +72,7 @@ export const vars = createGlobalTheme(':root', {
     mobileHeight: '76px'
   },
   footer: {
-    height: '275px',
+    height: '305px',
     mobileHeight: '260px'
   },
   breakpoints: {
@@ -80,6 +84,22 @@ export const vars = createGlobalTheme(':root', {
   },
   transitions: {
     opacity: '0.2s ease-in-out'
+  }
+})
+
+export const formVars = createGlobalTheme(':root', {
+  base: {
+    default: vars.colors.neutral60,
+    hover: vars.colors.black,
+    focus: '#1D74DC',
+    disabled: vars.colors.neutral50,
+    error: '#DC1D1D'
+  },
+  text: {
+    label: vars.colors.neutral60,
+    value: vars.colors.neutral80,
+    disabled: vars.colors.neutral50,
+    error: '#DC1D1D'
   }
 })
 

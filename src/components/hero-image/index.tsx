@@ -6,10 +6,21 @@ interface HeroImageProps {
   src: string
 }
 
-const HeroImage: React.FC<HeroImageProps> = ({ src }): JSX.Element => {
+const HeroImage: React.FC<HeroImageProps> = ({
+  src,
+  children
+}): JSX.Element => {
   return (
     <div className={heroWrapper}>
-      <Image className={image} src={src} />
+      <Image
+        className={image}
+        src={src}
+        objectFit="cover"
+        layout="fill"
+        width="100%"
+        height="100%"
+      />
+      {children}
     </div>
   )
 }

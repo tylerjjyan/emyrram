@@ -4,7 +4,7 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-  DocumentInitialProps
+  DocumentIntialProps
 } from 'next/document'
 import config from 'config/seo'
 
@@ -13,7 +13,7 @@ const { GTM_ID } = config
 class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
-  ): Promise<DocumentInitialProps> {
+  ): Promise<DocumentIntialProps> {
     const initialProps = await Document.getInitialProps(ctx)
 
     return initialProps
