@@ -4,7 +4,7 @@ import Document, {
   Main,
   NextScript,
   DocumentContext,
-  DocumentIntialProps
+  DocumentInitialProps
 } from 'next/document'
 import config from 'config/seo'
 
@@ -13,7 +13,7 @@ const { GTM_ID } = config
 class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
-  ): Promise<DocumentIntialProps> {
+  ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx)
 
     return initialProps
@@ -40,6 +40,16 @@ class MyDocument extends Document {
           />
         </Head>
         <body>
+          <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+          />
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{
+              __html: `(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FULLNAME';ftypes[1]='text';fnames[4]='PHONE';ftypes[4]='phone';fnames[2]='JOBTITLE';ftypes[2]='text';fnames[3]='RCOUNT';ftypes[3]='text';fnames[5]='BNAME';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);`
+            }}
+          />
           <noscript>
             <iframe
               title="gtm"

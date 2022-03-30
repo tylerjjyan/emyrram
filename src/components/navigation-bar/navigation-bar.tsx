@@ -3,14 +3,20 @@ import classNames from 'classnames'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import Link from '@/components/link-with-query'
-import { navigationItem, navigationWrapper, itemVariants } from './index.css'
+import {
+  navigationItem,
+  itemVariants,
+  navigationWrapperVariants
+} from './index.css'
 
 interface NavigationProps {
   colorTheme: keyof typeof itemVariants
+  isHorizontal?: boolean
 }
 
 const NavigationBar: React.FC<NavigationProps> = ({
-  colorTheme
+  colorTheme,
+  isHorizontal = true
 }): JSX.Element => {
   const router = useRouter()
   const [t] = useTranslation()
@@ -31,11 +37,15 @@ const NavigationBar: React.FC<NavigationProps> = ({
   ]
 
   return (
-    <nav className={navigationWrapper}>
+    <nav
+      className={
+        navigationWrapperVariants[isHorizontal ? 'horizontal' : 'vertical']
+      }
+    >
       {routes.map(route => {
         const isActive = router.pathname === route.href
         const itemClass = classNames(
-          navigationItem({ active: isActive }),
+          navigationItem({ active: isActive, horizontal: isHorizontal }),
           itemVariants[colorTheme]
         )
 

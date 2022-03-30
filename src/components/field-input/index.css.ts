@@ -3,7 +3,8 @@ import { style } from '@vanilla-extract/css'
 
 export const wrapper = style({
   position: 'relative',
-  width: '100%'
+  width: '100%',
+  height: 55
 })
 
 export const error = style({

@@ -67,6 +67,11 @@ const Head: React.FC<HeadProps> = props => {
         <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
         <link rel="stylesheet" href="https://use.typekit.net/psc5xru.css" />
         <link rel="icon" href="/static/favicon.ico" />
+        <link
+          href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
+          rel="stylesheet"
+          type="text/css"
+        />
         <meta
           property="og:locale"
           content={CurrentLang() === 'zh' ? 'zh_CN' : 'en_CA'}

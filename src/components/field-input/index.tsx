@@ -10,6 +10,7 @@ type Props = Omit<
 > & { label: string; onBlur?: React.FocusEventHandler; helperText?: string }
 
 const FieldInput: React.FC<Props> = ({
+  id = '',
   label = '',
   name = '',
   helperText = '',
@@ -19,8 +20,8 @@ const FieldInput: React.FC<Props> = ({
 
   return (
     <div className={styles.wrapper}>
+      <Input id={id} placeholder={label} {...field} {...props} />
       {label && <Label htmlFor={name}>{label}</Label>}
-      <Input id={name} placeholder={label} {...field} {...props} />
 
       {meta.touched && meta.error ? (
         <div className={styles.error}>{meta.error}</div>

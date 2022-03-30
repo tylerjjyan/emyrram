@@ -1,4 +1,4 @@
-import { style, globalStyle } from '@vanilla-extract/css'
+import { style, globalStyle, styleVariants } from '@vanilla-extract/css'
 import { vars } from '@/theme.css'
 
 export const socialWrapper = style({
@@ -16,11 +16,13 @@ export const socialItem = style({
   cursor: 'pointer'
 })
 
-export const wechatImgStyle = style({
-  visibility: 'hidden',
-  position: 'absolute',
-  transform: 'scale(5)',
-  bottom: 75
+export const socialItemVariants = styleVariants({
+  dark: [socialItem, { background: 'transparent' }],
+  light: [socialItem, { background: 'transparent' }]
+})
+
+globalStyle(`${socialItemVariants['light']} svg path`, {
+  fill: vars.colors.black
 })
 
 globalStyle(`${socialWrapper} > :not(:last-child)`, {

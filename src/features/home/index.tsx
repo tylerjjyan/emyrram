@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '@/components/layout'
-import HeroImage from '@/components/hero-image'
-import Hero from '@/images/home/home.hero.png'
 import PageSection, { sprinkles } from '@/components/page-section'
+import HeroSection from './hero'
 import SectionOne from './section-one'
 import SectionTwo from './section-two'
 import SectionThree from './section-three'
@@ -13,7 +12,7 @@ import SectionSix from './section-six'
 const Home = (): JSX.Element => {
   return (
     <Layout>
-      <HeroImage src={Hero} />
+      <HeroSection />
       <PageSection
         customStyle={sprinkles({
           paddingX: {

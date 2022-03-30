@@ -1,5 +1,5 @@
 const SEO_CONFIG = {
-  GTM_ID: '',
+  GTM_ID: 'GTM-KJZTNMD',
   REGISTER_BUTTON_ID: '',
   REGISTER_WALK_IN_BUTTON_ID: ''
 }
