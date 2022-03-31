@@ -1,10 +1,15 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import { appWithTranslation } from 'next-i18next'
-// import useSetLocaleEvents from '@/hooks/useSetLocaleEvents'
+import { ContactFormProvider } from '@/hooks/use-contact-form/context'
+import useSetLocaleEvents from '@/hooks/useSetLocaleEvents'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-  // useSetLocaleEvents()
-  return <Component {...pageProps} />
+  useSetLocaleEvents()
+  return (
+    <ContactFormProvider>
+      <Component {...pageProps} />
+    </ContactFormProvider>
+  )
 }
 export default appWithTranslation(MyApp)
