@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '@/components/layout'
 import PageSection, { sprinkles } from '@/components/page-section'
+import { useContactForm } from '@/hooks/use-contact-form'
 import HeroSection from './hero'
 import SectionOne from './section-one'
 import SectionTwo from './section-two'
@@ -8,8 +9,10 @@ import SectionThree from './section-three'
 import SectionFour from './section-four'
 import SectionFive from './section-five'
 import SectionSix from './section-six'
+import ContactUsSidebar from '../contact-us'
 
 const Home = (): JSX.Element => {
+  const { isFormOpen, toggleForm } = useContactForm()
   return (
     <Layout>
       <HeroSection />
@@ -67,6 +70,7 @@ const Home = (): JSX.Element => {
       >
         <SectionSix />
       </PageSection>
+      <ContactUsSidebar isOpen={isFormOpen} toggleSidebar={toggleForm} />
     </Layout>
   )
 }

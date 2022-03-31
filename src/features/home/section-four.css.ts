@@ -52,3 +52,11 @@ export const offerImageWrapper = style({
     }
   }
 })
+
+export const slideshowContainer = style({
+  width: '100%',
+  maxWidth: '670px',
+  height: 'auto',
+  background: vars.colors.neutral10,
+  borderRadius: '0px 0px 0px 160px'
+})

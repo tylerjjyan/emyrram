@@ -2,8 +2,10 @@ import React from 'react'
 import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import { sectionWrapper, textWrapper } from './section-six.css'
+import { useContactForm } from '@/hooks/use-contact-form'
 
 const SectionSix = (): JSX.Element => {
+  const { setIsFormOpen } = useContactForm()
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
@@ -28,6 +30,7 @@ const SectionSix = (): JSX.Element => {
           text="join the club"
           arrowVariant="right"
           variant={{ type: 'primary', size: 'large' }}
+          onClick={() => setIsFormOpen(true)}
         />
       </div>
     </div>

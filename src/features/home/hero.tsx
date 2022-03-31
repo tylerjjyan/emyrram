@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import HeroImage from '@/components/hero-image'
 import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
-import ContactUsSidebar from '../contact-us'
+import { useContactForm } from '@/hooks/use-contact-form'
 import Hero from '@/images/home/home.hero.png'
 import { vars } from '@/theme.css'
 import { heroTextWrapper } from './hero.css'
 
 const HeroSection = (): JSX.Element => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const toggleDrawer = (): void => {
-    setIsOpen(!isOpen)
-  }
-
+  const { setIsFormOpen } = useContactForm()
   return (
     <>
       <HeroImage src={Hero}>
@@ -44,11 +39,10 @@ const HeroSection = (): JSX.Element => {
             text="Contact Us"
             variant={{ type: 'secondary', size: 'large' }}
             arrowVariant="right"
-            onClick={() => setIsOpen(true)}
+            onClick={() => setIsFormOpen(true)}
           />
         </div>
       </HeroImage>
-      <ContactUsSidebar isOpen={isOpen} toggleSidebar={toggleDrawer} />
     </>
   )
 }

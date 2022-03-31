@@ -4,6 +4,7 @@ import { ArrowButton } from '@/components/button'
 import IconList from '@/components/icon-list'
 import { sectionWrapper, textWrapper, iconListWrapper } from './section-two.css'
 import { ReactComponent as TruckSVG } from './truck.svg'
+import { useContactForm } from '@/hooks/use-contact-form'
 
 const ICON_LIST = [
   {
@@ -30,6 +31,7 @@ const ICON_LIST = [
 ]
 
 const SectionTwo = (): JSX.Element => {
+  const { setIsFormOpen } = useContactForm()
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
@@ -51,6 +53,7 @@ const SectionTwo = (): JSX.Element => {
           text="get started"
           arrowVariant="right"
           variant={{ type: 'primary', size: 'large' }}
+          onClick={() => setIsFormOpen(true)}
         />
       </div>
       <div className={iconListWrapper}>

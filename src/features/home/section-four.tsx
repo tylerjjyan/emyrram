@@ -3,11 +3,15 @@ import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import {
   contentWrapper,
   leftWrapper,
-  imageWrapper,
-  offerImageWrapper
+  offerImageWrapper,
+  imageWrapper
 } from './section-four.css'
+import Slideshow from '@/components/slideshow'
+import Dog01 from '@/images/home/dog-01.jpeg'
+import Dog02 from '@/images/home/dog-02.jpeg'
+import Dog03 from '@/images/home/dog-03.jpeg'
 
-const SectionThree = (): JSX.Element => {
+const SectionFour = (): JSX.Element => {
   return (
     <>
       <div className={contentWrapper}>
@@ -62,10 +66,13 @@ const SectionThree = (): JSX.Element => {
           care of food hand-offs while you handle the cooking.`}
           />
         </div>
-        <div className={imageWrapper}></div>
+        <Slideshow
+          images={[Dog01, Dog02, Dog03]}
+          customContainer={imageWrapper}
+        />
       </div>
     </>
   )
 }
 
-export default SectionThree
+export default SectionFour
