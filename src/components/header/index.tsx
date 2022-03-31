@@ -43,7 +43,6 @@ const HEADER_CONFIG = {
 }
 
 const Header: React.FC<HeaderProps> = ({ config }) => {
-  console.log('WHAT IS CONFIG', config)
   const [forceTheme, setForceTheme] = useState<
     keyof typeof HEADER_CONFIG | undefined
   >(config?.background)
@@ -82,7 +81,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   useEffect(() => {
     const scrolledPastOffset = pastOffset()
 
-    setForceTheme(() =>
+    setForceTheme(
       isTransparent && scrolledPastOffset ? 'primary' : config?.background
     )
   }, [isTransparent, pastOffset, config])
