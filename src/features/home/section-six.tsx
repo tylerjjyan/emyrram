@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import { sectionWrapper, textWrapper } from './section-six.css'
 
@@ -11,7 +11,10 @@ const SectionSix = (): JSX.Element => {
           variant="h2"
           text="Ready to get started?"
           marginBottom="16px"
-          textAlign="center"
+          style={textSprinkles({
+            typeSize: ['h2', 'h4'],
+            textAlign: ['center', 'left']
+          })}
         />
         <Paragraph
           variant="medium"
@@ -19,7 +22,7 @@ const SectionSix = (): JSX.Element => {
         maecenas fermentum, hac id dignissim dui. Vitae ut nisi nibh pellentesque
         nunc, ultrices mauris.`}
           marginBottom="48px"
-          textAlign="center"
+          style={textSprinkles({ textAlign: ['center', 'left'] })}
         />
         <ArrowButton
           text="join the club"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Paragraph } from '../typography'
+import { Heading, Paragraph, textSprinkles } from '../typography'
 import { listItemIconWrapper, listItem, textWrapper, list } from './index.css'
 
 interface ListItem {
@@ -22,7 +22,12 @@ const IconList: React.FC<IconListProps> = ({ listItems = [] }) => {
               <Icon />
             </div>
             <div className={textWrapper}>
-              <Heading variant="h5" text={title} marginBottom="8px" />
+              <Heading
+                variant="h5"
+                text={title}
+                marginBottom="8px"
+                style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+              />
               <Paragraph variant="medium" text={content} />
             </div>
           </li>

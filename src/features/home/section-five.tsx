@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import {
   sectionWrapper,
   textWrapper,
@@ -12,11 +12,17 @@ const SectionTwo = (): JSX.Element => {
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
-        <Heading variant="h5" text="How it works" marginBottom="8px" />
+        <Heading
+          variant="h5"
+          text="How it works"
+          marginBottom="8px"
+          style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+        />
         <Heading
           variant="h2"
           text="Helping you achieve maximum efficiency"
           marginBottom="24px"
+          style={textSprinkles({ typeSize: ['h2', 'h4'] })}
         />
         <Paragraph
           variant="medium"

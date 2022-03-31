@@ -1,11 +1,16 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { contentWrapper, leftWrapper, imageWrapper } from './section-three.css'
 
 const SectionThree = (): JSX.Element => {
   return (
     <>
-      <Heading variant="h2" text="Our Location" marginBottom="16px" />
+      <Heading
+        variant="h2"
+        text="Our Location"
+        marginBottom="16px"
+        style={textSprinkles({ typeSize: ['h2', 'h4'] })}
+      />
       <div className={contentWrapper}>
         <div className={leftWrapper}>
           <Paragraph
@@ -25,19 +30,31 @@ const SectionThree = (): JSX.Element => {
           />
         </div>
         <div>
-          <Heading variant="h5" text="100,000+" />
+          <Heading
+            variant="h5"
+            text="100,000+"
+            style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+          />
           <Paragraph
             variant="medium"
             text="potential customers within a 3km delivery radius"
             marginBottom="16px"
           />
-          <Heading variant="h5" text="10 min." />
+          <Heading
+            variant="h5"
+            text="10 min."
+            style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+          />
           <Paragraph
             variant="medium"
             text="walking distance from BC Place, Rogers Arena, Yaletown & more"
             marginBottom="16px"
           />
-          <Heading variant="h5" text="Lower fees" />
+          <Heading
+            variant="h5"
+            text="Lower fees"
+            style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+          />
           <Paragraph variant="medium" text="through strategic locations" />
         </div>
       </div>

@@ -73,7 +73,7 @@ export const vars = createGlobalTheme(':root', {
   },
   footer: {
     height: '305px',
-    mobileHeight: '260px'
+    mobileHeight: '340px'
   },
   breakpoints: {
     phoneSmall: '450px',

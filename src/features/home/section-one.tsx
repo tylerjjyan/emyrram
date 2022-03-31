@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import VideoPlayer from '@/components/fullscreen-video'
 import { sectionWrapper, textWrapper } from './section-one.css'
 
@@ -20,6 +20,10 @@ const Home = (): JSX.Element => {
           variant="h2"
           text="A faster way to achieve your business goals"
           marginBottom="16px"
+          style={textSprinkles({
+            fontSize: ['h2', 'h4'],
+            lineHeight: ['h2', 'h4']
+          })}
         />
         <Paragraph
           variant="medium"

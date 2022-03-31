@@ -15,12 +15,8 @@ const Home = (): JSX.Element => {
       <HeroSection />
       <PageSection
         customStyle={sprinkles({
-          paddingX: {
-            default: '128px',
-            largeDesktop: '72px',
-            ipadMini: '64px'
-          },
-          paddingY: ['128px', '64px', '64px', '64px']
+          paddingX: ['152px', '72px', '48px', '24px'],
+          paddingY: ['128px', '80px', '64px', '64px']
         })}
       >
         <SectionOne />
@@ -55,8 +51,8 @@ const Home = (): JSX.Element => {
       </PageSection>
       <PageSection
         customStyle={sprinkles({
-          paddingRight: ['60px', '0px'],
-          paddingLeft: ['152px', '72px', '48px', '24px'],
+          paddingRight: ['60px', '0px', '32px'],
+          paddingLeft: ['152px', '72px', '32px', '24px'],
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >

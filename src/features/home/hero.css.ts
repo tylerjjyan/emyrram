@@ -8,5 +8,5 @@ export const heroTextWrapper = style({
   transform: 'translate(0, -50%)',
   padding: '0px 32px',
   maxWidth: '644px',
-  zIndex: vars.zIndex.header
+  zIndex: vars.zIndex.hero
 })

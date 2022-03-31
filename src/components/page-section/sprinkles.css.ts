@@ -20,12 +20,12 @@ const space = [
 
 const responsiveProperties = defineProperties({
   conditions: {
-    phone: { '@media': '(max-width: 599px)' },
-    ipadMini: { '@media': '(max-width: 767px)' },
-    largeDesktop: { '@media': '(max-width: 1280px)' },
-    default: {}
+    default: {},
+    largeDesktop: { '@media': 'screen and (max-width: 1280px)' },
+    ipadMini: { '@media': 'screen and (max-width: 767px)' },
+    phone: { '@media': 'screen and (max-width: 599px)' }
   },
-  defaultCondition: 'phone',
+  defaultCondition: 'ipadMini',
   responsiveArray: ['default', 'largeDesktop', 'ipadMini', 'phone'],
   properties: {
     display: ['none', 'flex'],

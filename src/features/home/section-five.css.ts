@@ -18,7 +18,19 @@ export const textWrapper = style({
   flexDirection: 'column',
   marginRight: '48px',
   maxWidth: '536px',
-  width: '100%'
+  width: '100%',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      maxWidth: 'unset',
+      marginBottom: '80px'
+    },
+
+    'screen and (max-width: 599px)': {
+      maxWidth: 'unset',
+      marginBottom: '40px'
+    }
+  }
 })
 
 export const imageContainer = style({
@@ -27,6 +39,9 @@ export const imageContainer = style({
   minHeight: '417px',
 
   '@media': {
+    'screen and (max-width: 767px)': {
+      minHeight: '453px'
+    },
     'screen and (max-width: 375px)': {
       minHeight: '243px'
     }
@@ -45,7 +60,8 @@ export const backImageWrapper = style({
   '@media': {
     'screen and (max-width: 375px)': {
       width: '243px',
-      height: '208px'
+      height: '208px',
+      borderRadius: '40px 0px 0px 0px'
     }
   }
 })
@@ -63,7 +79,8 @@ export const forwardImageWrapper = style({
   '@media': {
     'screen and (max-width: 375px)': {
       width: '194px',
-      height: '178px'
+      height: '178px',
+      borderRadius: '0px 0px 0px 40px'
     }
   }
 })

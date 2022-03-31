@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading } from '@/components/typography'
+import { Heading, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import IconList from '@/components/icon-list'
 import { sectionWrapper, textWrapper, iconListWrapper } from './section-two.css'
@@ -33,11 +33,19 @@ const SectionTwo = (): JSX.Element => {
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
-        <Heading variant="h5" text="How it works" marginBottom="8px" />
+        <Heading
+          variant="h5"
+          text="How it works"
+          marginBottom="8px"
+          style={textSprinkles({
+            typeSize: ['h5', 'h6']
+          })}
+        />
         <Heading
           variant="h2"
           text={`A sleek new approach to food service`}
           marginBottom="40px"
+          style={textSprinkles({ typeSize: ['h2', 'h4'] })}
         />
         <ArrowButton
           text="get started"

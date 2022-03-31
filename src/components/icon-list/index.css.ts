@@ -20,7 +20,17 @@ export const listItemIconWrapper = style({
   height: '56px',
   backgroundColor: vars.colors.neutral10,
   borderRadius: '50%',
-  flex: '1'
+  boxSizing: 'border-box',
+  padding: '0 16px',
+  zIndex: 2,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      width: '44px',
+      height: '44px',
+      padding: '0 10px'
+    }
+  }
 })
 
 export const listItemDash = style({
@@ -33,7 +43,13 @@ export const textWrapper = style({
 })
 
 globalStyle(`${listItem} > :not(:last-child)`, {
-  marginRight: '32px'
+  marginRight: '32px',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginRight: '24px'
+    }
+  }
 })
 
 globalStyle(`${listItem}:not(:last-child) :before`, {
@@ -45,4 +61,14 @@ globalStyle(`${listItem}:not(:last-child) :before`, {
   width: '0px',
   border: `2px dashed ${vars.colors.neutral10}`,
   zIndex: 1
+})
+
+globalStyle(`${listItemIconWrapper} > svg`, {
+  zIndex: 2,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      transform: 'scale(0.8)'
+    }
+  }
 })

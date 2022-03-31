@@ -1,13 +1,24 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
-import { contentWrapper, leftWrapper, imageWrapper } from './section-four.css'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
+import {
+  contentWrapper,
+  leftWrapper,
+  imageWrapper,
+  offerImageWrapper
+} from './section-four.css'
 
 const SectionThree = (): JSX.Element => {
   return (
     <>
       <div className={contentWrapper}>
         <div className={leftWrapper}>
-          <Heading variant="h2" text="What we offer" marginBottom="48px" />
+          <Heading
+            variant="h2"
+            text="What we offer"
+            marginBottom="48px"
+            style={textSprinkles({ typeSize: ['h2', 'h4'] })}
+          />
+          <div className={offerImageWrapper}></div>
           <Heading
             variant="h5"
             text="Ultra-Efficient Kitchens"
@@ -21,10 +32,12 @@ const SectionThree = (): JSX.Element => {
             prepping food right away.`}
             marginBottom="40px"
           />
+          <div className={offerImageWrapper}></div>
           <Heading
             variant="h5"
             text="Fresher Food, Lower Delivery Fees"
             marginBottom="8px"
+            style={textSprinkles({ typeSize: ['h5', 'h6'] })}
           />
           <Paragraph
             variant="medium"
@@ -34,7 +47,13 @@ const SectionThree = (): JSX.Element => {
             your customers.`}
             marginBottom="40px"
           />
-          <Heading variant="h5" text="Purpose-Built" marginBottom="8px" />
+          <div className={offerImageWrapper}></div>
+          <Heading
+            variant="h5"
+            text="Purpose-Built"
+            marginBottom="8px"
+            style={textSprinkles({ typeSize: ['h5', 'h6'] })}
+          />
           <Paragraph
             variant="medium"
             text={`From top to bottom, Club Kitchen is designed for efficient

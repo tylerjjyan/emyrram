@@ -19,6 +19,9 @@ export const textWrapper = style({
   width: '100%',
 
   '@media': {
+    'screen and (max-width: 1096px)': {
+      marginRight: '24px'
+    },
     'screen and (max-width: 767px)': {
       maxWidth: 'unset',
       margin: '0 0 56px 0'
