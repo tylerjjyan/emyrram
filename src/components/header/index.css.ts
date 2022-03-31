@@ -4,7 +4,6 @@ import { vars } from '@/theme.css'
 
 export const wrapper = recipe({
   base: {
-    position: 'fixed',
     top: 0,
     left: 0,
     height: '100%',
@@ -13,6 +12,7 @@ export const wrapper = recipe({
   variants: {
     open: {
       true: {
+        position: 'fixed',
         display: 'flex',
         flexDirection: 'column',
         height: '100vh',
