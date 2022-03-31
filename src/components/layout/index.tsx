@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react'
+import classNames from 'classnames'
 import Header, { HeaderConfig } from '@/components/header'
 import Footer from '@/components/footer'
 import Head from '@/components/head'
@@ -11,6 +12,7 @@ interface LayoutProps {
   HeaderComponent?: React.ComponentType
   headerConfig?: HeaderConfig
   children?: ReactNode
+  layoutStyle?: string
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -19,10 +21,11 @@ const Layout: React.FC<LayoutProps> = ({
   title,
   description,
   headerConfig = { background: 'transparent', position: 'fixed' },
-  HeaderComponent
+  HeaderComponent,
+  layoutStyle
 }) => {
   return (
-    <div className={wrapper}>
+    <div className={classNames(wrapper, layoutStyle)}>
       {HeaderComponent ? <HeaderComponent /> : <Header config={headerConfig} />}
       <Head title={title} description={description} path={path} />
       <main className={main}>{children}</main>
