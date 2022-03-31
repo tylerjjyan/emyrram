@@ -6,11 +6,11 @@ import FAQSection from './faq'
 
 const FAQ = (): JSX.Element => {
   return (
-    <Layout headerConfig={{ background: 'secondary', position: 'fixed' }}>
+    <Layout headerConfig={{ background: 'secondary', position: 'sticky' }}>
       <Hero />
       <PageSection
         customStyle={sprinkles({
-          // paddingX: ['152px', '72px', '48px', '24px'],
+          paddingX: { phone: '24px' },
           paddingY: ['112px', '80px', '64px', '64px']
         })}
       >
