@@ -1,13 +1,13 @@
 {
   "presets": ["next/babel"],
-  // "plugins": [
-  //   "@vanilla-extract/babel-plugin",
-  //   "inline-react-svg",
-  //   [
-  //     "module-resolver",
-  //     {
-  //       "root": ["./src"]
-  //     }
-  //   ]
-  // ]
+  "plugins": [
+    "@vanilla-extract/babel-plugin",
+    "inline-react-svg",
+    [
+      "module-resolver",
+      {
+        "root": ["./src"]
+      }
+    ]
+  ]
 }

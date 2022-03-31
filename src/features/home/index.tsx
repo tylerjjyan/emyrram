@@ -32,7 +32,8 @@ const Home = (): JSX.Element => {
       </PageSection>
       <PageSection
         customStyle={sprinkles({
-          paddingX: ['152px', '72px', '48px', '24px'],
+          paddingRight: ['152px', '72px', '48px', '0px'],
+          paddingLeft: ['152px', '72px', '48px', '24px'],
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >

@@ -60,7 +60,13 @@ globalStyle(`${listItem}:not(:last-child) :before`, {
   bottom: 0,
   width: '0px',
   border: `2px dashed ${vars.colors.neutral10}`,
-  zIndex: 1
+  zIndex: 1,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      left: '22px'
+    }
+  }
 })
 
 globalStyle(`${listItemIconWrapper} > svg`, {

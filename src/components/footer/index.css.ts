@@ -8,18 +8,36 @@ export const footerWrapper = style({
   flexDirection: 'column',
   width: '100%',
   padding: '56px 64px',
-  background: vars.colors.black
+  background: vars.colors.black,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      padding: '56px 24px'
+    }
+  }
 })
 
 export const upperWrapper = style({
   display: 'flex',
   paddingBottom: '48px',
   marginBottom: '32px',
-  borderBottom: `1px solid ${vars.colors.neutral60}`
+  borderBottom: `1px solid ${vars.colors.neutral60}`,
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      flexDirection: 'column'
+    }
+  }
 })
 
 export const contentWrapper = style({
-  display: 'flex'
+  display: 'flex',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginTop: '40px'
+    }
+  }
 })
 
 export const lowerWrapper = style({

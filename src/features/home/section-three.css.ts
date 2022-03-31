@@ -9,7 +9,8 @@ export const contentWrapper = style({
   '@media': {
     'screen and (max-width: 767px)': {
       flexDirection: 'column',
-      justifyContent: 'flex-start'
+      justifyContent: 'flex-start',
+      padding: '0 24px 0 0'
     }
   }
 })

@@ -63,7 +63,13 @@ export const header = recipe({
     width: '100vw',
     height: '100px',
     padding: '24px 64px',
-    zIndex: vars.zIndex.header
+    zIndex: vars.zIndex.header,
+
+    '@media': {
+      'screen and (max-width: 767px)': {
+        padding: '24px'
+      }
+    }
   },
   variants: {
     background: {

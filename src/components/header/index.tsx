@@ -15,6 +15,7 @@ import { ReactComponent as LogoWhiteSVG } from './icons/logo.svg'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
+import ContactUsSidebar from '@/features/contact-us'
 
 interface HeaderProps {
   config: HeaderVariants
@@ -46,6 +47,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     keyof typeof HEADER_CONFIG | undefined
   >()
   const [isOpen, setIsOpen] = useState(false)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
   const isTransparent = config?.background === 'transparent'
 
@@ -88,6 +90,10 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     enabled: isTransparent && !isOpen
   })
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
+
   return (
     <div className={wrapper({ open: isOpen })}>
       {!isOpen && (
@@ -102,12 +108,14 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                 variant={buttonVariant}
                 text="Contact Us"
                 customStyle={customButtonStyle}
+                onClick={() => setIsSidebarOpen(true)}
               />
             </div>
           )}
         </div>
       )}
       {displayMobile && isOpen && <FullScreenHeader setIsOpen={setIsOpen} />}
+      <ContactUsSidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </div>
   )
 }
