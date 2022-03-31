@@ -2,10 +2,6 @@ import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 import { vars } from '@/theme.css'
 
-export const navigationWrapper = style({
-  display: 'flex'
-})
-
 export const navigationWrapperVariants = styleVariants({
   horizontal: {
     display: 'flex',
@@ -43,6 +39,7 @@ export const itemVariants = styleVariants({
 })
 
 const itemBase = style({
+  width: 'fit-content',
   fontSize: vars.fontSizes.medium,
   lineHeight: vars.lineHeights.medium,
   textTransform: 'uppercase',
@@ -54,6 +51,14 @@ const itemBase = style({
       marginRight: '16px'
     }
   }
+})
+
+globalStyle(`${itemBase}`, {
+  width: '-moz-fit-content'
+})
+
+globalStyle(`${itemBase}`, {
+  width: 'intrinsic'
 })
 
 export const navigationItem = recipe({

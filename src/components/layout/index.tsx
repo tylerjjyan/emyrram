@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Header from '@/components/header'
+import Header, { HeaderConfig } from '@/components/header'
 import Footer from '@/components/footer'
 import Head from '@/components/head'
 import { wrapper, main } from './index.css'
@@ -9,7 +9,7 @@ interface LayoutProps {
   description?: string
   path?: string
   HeaderComponent?: React.ComponentType
-  headerConfig?: null
+  headerConfig?: HeaderConfig
   children?: ReactNode
 }
 
@@ -18,13 +18,12 @@ const Layout: React.FC<LayoutProps> = ({
   children,
   title,
   description,
-  HeaderComponent = Header
+  headerConfig = { background: 'transparent', position: 'fixed' },
+  HeaderComponent
 }) => {
   return (
     <div className={wrapper}>
-      <HeaderComponent
-        config={{ background: 'transparent', position: 'fixed' }}
-      />
+      {HeaderComponent ? <HeaderComponent /> : <Header config={headerConfig} />}
       <Head title={title} description={description} path={path} />
       <main className={main}>{children}</main>
       <Footer />

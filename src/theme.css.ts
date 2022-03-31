@@ -15,6 +15,7 @@ export const vars = createGlobalTheme(':root', {
     },
     neutral5: '#F8F8F8',
     neutral10: '#EEEDED',
+    neutral20: '#D1D1D1',
     neutral50: '#A6A2A6',
     neutral60: '#817E81',
     neutral80: '#2A2A2E',

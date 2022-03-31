@@ -1,5 +1,5 @@
 import React from 'react'
-import { Heading, Paragraph } from '@/components/typography'
+import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import Drawer from 'react-modern-drawer'
 import Form from './form'
 import 'react-modern-drawer/dist/index.css'
@@ -31,7 +31,7 @@ const ContactUsSidebar: React.FC<ContactUsProps> = ({
         text={`We’re happy to connect with great restaurants looking for their next
       opportunity to grow.`}
         variant="medium"
-        marginBottom="32px"
+        style={textSprinkles({ marginBottom: ['32px', '16px'] })}
       />
 
       <Form />

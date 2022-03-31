@@ -43,9 +43,10 @@ const HEADER_CONFIG = {
 }
 
 const Header: React.FC<HeaderProps> = ({ config }) => {
+  console.log('WHAT IS CONFIG', config)
   const [forceTheme, setForceTheme] = useState<
     keyof typeof HEADER_CONFIG | undefined
-  >()
+  >(config?.background)
   const [isOpen, setIsOpen] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
@@ -82,15 +83,15 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     const scrolledPastOffset = pastOffset()
 
     setForceTheme(() =>
-      isTransparent && scrolledPastOffset ? 'primary' : undefined
+      isTransparent && scrolledPastOffset ? 'primary' : config?.background
     )
-  }, [isTransparent, pastOffset])
+  }, [isTransparent, pastOffset, config])
 
   useEventListener('scroll', onScroll, {
     enabled: isTransparent && !isOpen
   })
 
-  const toggleSidebar = () => {
+  const toggleSidebar = (): void => {
     setIsSidebarOpen(!isSidebarOpen)
   }
 
@@ -121,3 +122,4 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
 }
 
 export default Header
+export type HeaderConfig = HeaderVariants

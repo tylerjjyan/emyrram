@@ -80,7 +80,7 @@ export const header = recipe({
         background: vars.colors.pureWhite
       },
       secondary: {
-        background: vars.colors.neutral10
+        background: vars.colors.neutral5
       }
     },
     position: {
@@ -114,4 +114,12 @@ export const navigationWrapper = style({
 
 export const customButtonStyle = style({
   marginLeft: '16px'
+})
+
+export const customButtion = style({
+  margin: '32px 0'
+})
+
+export const contentWrapper = style({
+  padding: '32px 24px'
 })

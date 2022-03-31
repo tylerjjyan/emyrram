@@ -14,6 +14,7 @@ const space = [
   '64px',
   '72px',
   '80px',
+  '112px',
   '128px',
   '152px'
 ]

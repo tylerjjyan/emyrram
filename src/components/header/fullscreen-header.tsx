@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/button'
 import NavigationBar from '@/components/navigation-bar'
-import { header } from './index.css'
+import { header, customButtion, contentWrapper } from './index.css'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as XCircleSVG } from './icons/x-circle.svg'
 
@@ -18,11 +18,12 @@ const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
         <LogoDarkSVG />
         <XCircleSVG onClick={() => setIsOpen(false)} />
       </div>
-      <div>
+      <div className={contentWrapper}>
         <NavigationBar colorTheme="dark" isHorizontal={false} />
         <Button
           variant={{ type: 'primary', size: 'large' }}
           text="Contact Us"
+          customStyle={customButtion}
         />
       </div>
     </div>
