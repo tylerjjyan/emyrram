@@ -48,7 +48,7 @@ const HEADER_CONFIG = {
 const Header: React.FC<HeaderProps> = ({ config }) => {
   const [forceTheme, setForceTheme] = useState<
     keyof typeof HEADER_CONFIG | undefined
-  >(config?.background)
+  >()
   const [isOpen, setIsOpen] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
