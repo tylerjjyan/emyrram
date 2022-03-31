@@ -15,6 +15,7 @@ import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
 import ContactUsSidebar from '@/features/contact-us'
+import LanguageSwitcher, { LanguageButtonType } from '../language-switcher'
 
 interface HeaderProps {
   config: HeaderVariants
@@ -23,18 +24,21 @@ interface HeaderProps {
 const HEADER_CONFIG = {
   transparent: {
     logo: LogoWhiteSVG,
+    languageButtonConfig: 'light',
     navigationConfig: 'light',
     buttonConfig: { type: 'secondary', size: 'large' },
     menu: MenuWhiteSVG
   },
   primary: {
     logo: LogoDarkSVG,
+    languageButtonConfig: 'dark',
     navigationConfig: 'dark',
     buttonConfig: { type: 'primary', size: 'large' },
     menu: MenuDarkSVG
   },
   secondary: {
     logo: LogoDarkSVG,
+    languageButtonConfig: 'dark',
     navigationConfig: 'dark',
     buttonConfig: { type: 'primary', size: 'large' },
     menu: MenuDarkSVG
@@ -55,11 +59,13 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     logo: LogoSVG,
     buttonConfig,
     navigationConfig,
+    languageButtonConfig,
     menu: MenuSVG
   } = headerInfo
 
   const buttonVariant = buttonConfig as ButtonVariantType
   const navigationVariant = navigationConfig as NavigationBarType
+  const languageButtonVariant = languageButtonConfig as LanguageButtonType
 
   const pastOffset = useCallback(() => {
     const offset = displayMobile ? 15 : 125
@@ -73,14 +79,14 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
       setForceTheme('primary')
     }
     if (!scrolledPastOffset && forceTheme !== 'transparent') {
-      setForceTheme('transparent')
+      setForceTheme(() => 'transparent')
     }
   }, [forceTheme, pastOffset])
 
   useEffect(() => {
     const scrolledPastOffset = pastOffset()
 
-    setForceTheme(
+    setForceTheme(() =>
       isTransparent && scrolledPastOffset ? 'primary' : config?.background
     )
   }, [isTransparent, pastOffset, config])
@@ -99,7 +105,10 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
         <div className={header({ ...config, background: forceTheme })}>
           <LogoSVG />
           {displayMobile ? (
-            <MenuSVG onClick={() => setIsOpen(true)} />
+            <div className={navigationWrapper}>
+              <MenuSVG onClick={() => setIsOpen(true)} />
+              <LanguageSwitcher theme={languageButtonVariant} />
+            </div>
           ) : (
             <div className={navigationWrapper}>
               <NavigationBar colorTheme={navigationVariant} />
@@ -109,6 +118,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                 customStyle={customButtonStyle}
                 onClick={() => setIsSidebarOpen(true)}
               />
+              <LanguageSwitcher theme={languageButtonVariant} />
             </div>
           )}
         </div>
