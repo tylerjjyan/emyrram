@@ -5,7 +5,7 @@ import { vars } from '@/theme.css'
 import { variants, textVars } from './paragraph.css'
 
 interface ParagraphProps {
-  text: string
+  text?: string
   marginTop?: string
   marginBottom?: string
   textAlign?: string
@@ -25,7 +25,8 @@ const Paragraph: React.FC<ParagraphProps> = ({
   fontFamily = vars.fonts.body,
   fontWeight = vars.fontWeights.regular,
   variant,
-  style = ''
+  style = '',
+  children
 }) => {
   const styleWrapper = classNames(variants[variant], style)
 
@@ -46,6 +47,7 @@ const Paragraph: React.FC<ParagraphProps> = ({
       className={styleWrapper}
     >
       {text}
+      {children}
     </p>
   )
 }

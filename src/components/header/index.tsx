@@ -8,8 +8,7 @@ import {
   header,
   HeaderVariants,
   navigationWrapper,
-  customButtonStyle,
-  wrapper
+  customButtonStyle
 } from './index.css'
 import { ReactComponent as LogoWhiteSVG } from './icons/logo.svg'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
@@ -95,7 +94,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   }
 
   return (
-    <div className={wrapper({ open: isOpen })}>
+    <>
       {!isOpen && (
         <div className={header({ ...config, background: forceTheme })}>
           <LogoSVG />
@@ -116,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
       )}
       {displayMobile && isOpen && <FullScreenHeader setIsOpen={setIsOpen} />}
       <ContactUsSidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-    </div>
+    </>
   )
 }
 

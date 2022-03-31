@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/button'
 import NavigationBar from '@/components/navigation-bar'
-import { header, customButtion, contentWrapper } from './index.css'
+import { header, customButtion, contentWrapper, wrapper } from './index.css'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as XCircleSVG } from './icons/x-circle.svg'
 
@@ -11,7 +11,7 @@ interface HeaderProps {
 
 const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
   return (
-    <div>
+    <div className={wrapper}>
       <div
         className={header({ background: 'transparent', position: 'static' })}
       >

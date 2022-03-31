@@ -2,27 +2,15 @@ import { style, styleVariants } from '@vanilla-extract/css'
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 import { vars } from '@/theme.css'
 
-export const wrapper = recipe({
-  base: {
-    top: 0,
-    left: 0,
-    height: '100%',
-    zIndex: vars.zIndex.header
-  },
-  variants: {
-    open: {
-      true: {
-        position: 'fixed',
-        display: 'flex',
-        flexDirection: 'column',
-        height: '100vh',
-        background: vars.colors.neutral5
-      },
-      false: {
-        height: '100%'
-      }
-    }
-  }
+export const wrapper = style({
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  height: '100vh',
+  background: vars.colors.neutral5,
+  zIndex: vars.zIndex.header
 })
 
 export const headerContainer = style({

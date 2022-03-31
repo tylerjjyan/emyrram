@@ -6,8 +6,10 @@ import { useContactForm } from '@/hooks/use-contact-form'
 import Hero from '@/images/home/home.hero.png'
 import { vars } from '@/theme.css'
 import { heroTextWrapper } from './hero.css'
+import { useTranslation } from 'next-i18next'
 
 const HeroSection = (): JSX.Element => {
+  const { t } = useTranslation()
   const { setIsFormOpen } = useContactForm()
   return (
     <>
@@ -16,7 +18,10 @@ const HeroSection = (): JSX.Element => {
           <Heading
             variant="h1"
             textColor={vars.colors.pureWhite}
-            text="Next generation food service has arrived"
+            text={t(
+              'home.hero.1.1a.title',
+              'Next generation food service has arrived'
+            )}
             marginBottom="16px"
             style={textSprinkles({
               fontSize: ['h1', 'h3'],
@@ -26,9 +31,12 @@ const HeroSection = (): JSX.Element => {
           <Paragraph
             variant="large"
             textColor={vars.colors.pureWhite}
-            text={`Club Kitchen was designed to help restaurant owners like you achieve your
+            text={t(
+              'home.hero.1.1a.text',
+              `Club Kitchen was designed to help restaurant owners like you achieve your
           goals faster through technology and turnkey solutions with our move-in
-          ready kitchens.`}
+          ready kitchens.`
+            )}
             style={textSprinkles({
               fontSize: ['large', 'medium'],
               lineHeight: ['large', 'medium'],
@@ -36,7 +44,7 @@ const HeroSection = (): JSX.Element => {
             })}
           />
           <ArrowButton
-            text="Contact Us"
+            text={t('home.hero.1.1a.button', 'Contact Us')}
             variant={{ type: 'secondary', size: 'large' }}
             arrowVariant="right"
             onClick={() => setIsFormOpen(true)}
