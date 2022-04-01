@@ -220,7 +220,7 @@ const PRIVACY_CONTENT = [
         />
         <Paragraph
           variant="medium"
-          text={`89 Nelson St., Vancouver, BC, V6Z 0E7, Canada`}
+          text={`900-1095 West Pender St, Vancouver, BC, V6E 2M6, Canada`}
         />
       </>
     )
