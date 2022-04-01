@@ -31,10 +31,6 @@ export const input = style({
 
   ':disabled': {
     borderBottom: `1px solid ${formVars.base.disabled}`
-  },
-
-  ':invalid': {
-    borderBottom: `1px solid ${formVars.base.error}`
   }
 })
 

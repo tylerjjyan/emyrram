@@ -13,6 +13,7 @@ const ThankYou = (): JSX.Element => {
         isButtonVisible: false
       }}
       layoutStyle={layoutStyle}
+      customSeoTags={<meta name="robots" content="noindex,nofollow"></meta>}
     >
       <PageSection
         backgroundTheme="light"

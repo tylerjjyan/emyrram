@@ -13,6 +13,7 @@ interface LayoutProps {
   headerConfig?: HeaderConfig
   children?: ReactNode
   layoutStyle?: string
+  customSeoTags?: ReactNode
 }
 
 const Layout: React.FC<LayoutProps> = ({
@@ -22,12 +23,15 @@ const Layout: React.FC<LayoutProps> = ({
   description,
   headerConfig = { background: 'transparent', position: 'fixed' },
   HeaderComponent,
-  layoutStyle
+  layoutStyle,
+  customSeoTags
 }) => {
   return (
     <div className={classNames(wrapper, layoutStyle)}>
       {HeaderComponent ? <HeaderComponent /> : <Header config={headerConfig} />}
-      <Head title={title} description={description} path={path} />
+      <Head title={title} description={description} path={path}>
+        {customSeoTags}
+      </Head>
       <main className={main}>{children}</main>
       <Footer />
     </div>
