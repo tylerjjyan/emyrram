@@ -16,6 +16,7 @@ export const leftWrapper = style({
   '@media': {
     'screen and (max-width: 767px)': {
       marginRight: '0',
+      height: '100%',
       maxWidth: 'unset',
       padding: 0
     }
@@ -41,7 +42,7 @@ export const offerImageWrapper = style({
 
   '@media': {
     'screen and (max-width: 767px)': {
-      display: 'block',
+      display: 'inline-block',
       width: '100%',
       height: '100%',
       maxHeight: '400px',
