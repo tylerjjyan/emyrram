@@ -5,9 +5,13 @@ import {
   textWrapper,
   imageContainer,
   backImageWrapper,
-  forwardImageWrapper
+  forwardImageWrapper,
+  imageStyle
 } from './section-five.css'
 import { useTranslation } from 'next-i18next'
+import SectionImage from '@/components/section-image'
+import HomeSection51 from '@/images/home/home.section.5.1.png'
+import HomeSection52 from '@/images/home/home.section.5.2.jpg'
 
 const SectionFive = (): JSX.Element => {
   const { t } = useTranslation()
@@ -41,8 +45,22 @@ const SectionFive = (): JSX.Element => {
         />
       </div>
       <div className={imageContainer}>
-        <div className={backImageWrapper}></div>
-        <div className={forwardImageWrapper}></div>
+        <div className={backImageWrapper}>
+          <SectionImage
+            src={HomeSection52}
+            mobileSrc={HomeSection52}
+            alt=""
+            customStyle={imageStyle}
+          />
+        </div>
+        <div className={forwardImageWrapper}>
+          <SectionImage
+            src={HomeSection51}
+            mobileSrc={HomeSection51}
+            alt=""
+            customStyle={imageStyle}
+          />
+        </div>
       </div>
     </div>
   )

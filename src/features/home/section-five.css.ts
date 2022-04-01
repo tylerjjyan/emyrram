@@ -56,6 +56,7 @@ export const backImageWrapper = style({
   height: '85%',
   background: vars.colors.neutral5,
   borderRadius: '80px 0px 0px 0px',
+  overflow: 'hidden',
 
   '@media': {
     'screen and (max-width: 767px)': {
@@ -73,10 +74,17 @@ export const forwardImageWrapper = style({
   background: vars.colors.neutral10,
   borderRadius: '0px 0px 0px 80px',
   zIndex: 1,
+  overflow: 'hidden',
 
   '@media': {
     'screen and (max-width: 767px)': {
       borderRadius: '0px 0px 0px 40px'
     }
   }
+})
+
+export const imageStyle = style({
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover'
 })
