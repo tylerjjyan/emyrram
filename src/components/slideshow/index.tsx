@@ -24,7 +24,7 @@ const Slideshow: React.FC<SlideshowProps> = ({
     resetTimeout()
     timeoutRef.current = setTimeout(
       () => setCurrentIndex((currentIndex + 1) % images.length),
-      3000
+      6000
     )
 
     return () => {
