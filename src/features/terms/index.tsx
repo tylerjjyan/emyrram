@@ -4,8 +4,9 @@ import PageSection, { sprinkles } from '@/components/page-section'
 import { Paragraph } from '@/components/typography'
 import Hero from './hero'
 import TermsSection from './terms-section'
+import { textLink } from './index.css'
 
-const PRIVACY_CONTENT = [
+const TERMS_CONTENT = [
   {
     title: 'Overview',
     content: (
@@ -360,8 +361,30 @@ const PRIVACY_CONTENT = [
           variant="medium"
           marginBottom="24px"
           text={`Your submission of personal information through the store is governed by
-          our Privacy Policy. To view our Privacy Policy.`}
-        />
+          our `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="/privacy-policy"
+              className={textLink}
+            >
+              Privacy Policy.
+            </a>
+          </span>
+          <span>
+            To view our{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="/privacy-policy"
+              className={textLink}
+            >
+              Privacy Policy.
+            </a>
+          </span>
+        </Paragraph>
       </>
     )
   },
@@ -634,7 +657,7 @@ const PRIVACY_CONTENT = [
   }
 ]
 
-const PrivacyPolicy = (): JSX.Element => {
+const TermsOfService = (): JSX.Element => {
   return (
     <Layout headerConfig={{ background: 'secondary', position: 'static' }}>
       <Hero />
@@ -645,7 +668,7 @@ const PrivacyPolicy = (): JSX.Element => {
         })}
         maxWidth="856px"
       >
-        {PRIVACY_CONTENT.map(({ title, content }, index) => {
+        {TERMS_CONTENT.map(({ title, content }, index) => {
           return (
             <TermsSection key={index} title={title}>
               {content}
@@ -657,4 +680,4 @@ const PrivacyPolicy = (): JSX.Element => {
   )
 }
 
-export default PrivacyPolicy
+export default TermsOfService

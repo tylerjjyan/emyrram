@@ -1,6 +1,6 @@
 import React from 'react'
 import { Heading, textSprinkles } from '@/components/typography'
-import { privacySectionWrapper } from './index.css'
+import { termsSectionWrapper } from './index.css'
 
 interface PrivacySectionProps {
   title: string
@@ -11,7 +11,7 @@ const PrivacySection: React.FC<PrivacySectionProps> = ({
   children
 }): JSX.Element => {
   return (
-    <div className={privacySectionWrapper}>
+    <div className={termsSectionWrapper}>
       <Heading
         variant="h4"
         text={title}
