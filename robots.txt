@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thankyou/
+Disallow: /zh/thankyou/
+Sitemap: https://clubkitchen.ca/sitemap.xml
+Host: https://clubkitchen.ca

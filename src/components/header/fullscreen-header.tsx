@@ -23,6 +23,7 @@ const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
         <Button
           variant={{ type: 'primary', size: 'large' }}
           text="Contact Us"
+          id="club-kitchen-contact-us-menu"
           customStyle={customButtion}
         />
       </div>

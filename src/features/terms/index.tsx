@@ -659,7 +659,10 @@ const TERMS_CONTENT = [
 
 const TermsOfService = (): JSX.Element => {
   return (
-    <Layout headerConfig={{ background: 'secondary', position: 'static' }}>
+    <Layout
+      headerConfig={{ background: 'secondary', position: 'static' }}
+      path="/terms"
+    >
       <Hero />
       <PageSection
         customStyle={sprinkles({

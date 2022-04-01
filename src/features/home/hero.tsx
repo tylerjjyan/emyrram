@@ -45,6 +45,7 @@ const HeroSection = (): JSX.Element => {
           />
           <ArrowButton
             text={t('home.hero.1.1a.button', 'Contact Us')}
+            id="club-kitchen-contact-us-hero"
             variant={{ type: 'secondary', size: 'large' }}
             arrowVariant="right"
             onClick={() => setIsFormOpen(true)}

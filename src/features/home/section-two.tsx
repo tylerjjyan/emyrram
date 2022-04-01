@@ -69,6 +69,7 @@ const SectionTwo = (): JSX.Element => {
         <ArrowButton
           text={t('home.section.2.1a.button', `Get Started`)}
           arrowVariant="right"
+          id="club-kitchen-get-started"
           variant={{ type: 'primary', size: 'large' }}
           onClick={() => setIsFormOpen(true)}
         />

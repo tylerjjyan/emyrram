@@ -25,6 +25,7 @@ const FAQ = (): JSX.Element => {
         kitchens.`
       )}
       headerConfig={{ background: 'secondary', position: 'sticky' }}
+      path="/faq"
     >
       <Hero />
       <PageSection

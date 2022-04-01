@@ -298,7 +298,10 @@ const PRIVACY_CONTENT = [
 
 const PrivacyPolicy = (): JSX.Element => {
   return (
-    <Layout headerConfig={{ background: 'secondary', position: 'static' }}>
+    <Layout
+      headerConfig={{ background: 'secondary', position: 'static' }}
+      path="/privacy-policy"
+    >
       <Hero />
       <PageSection
         customStyle={sprinkles({

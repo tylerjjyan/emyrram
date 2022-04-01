@@ -14,7 +14,7 @@ import ContactUsSidebar from '../contact-us'
 const Home = (): JSX.Element => {
   const { isFormOpen, toggleForm } = useContactForm()
   return (
-    <Layout>
+    <Layout path="/">
       <HeroSection />
       <PageSection
         customStyle={sprinkles({

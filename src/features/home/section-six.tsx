@@ -33,6 +33,7 @@ const SectionSix = (): JSX.Element => {
         />
         <ArrowButton
           text={t('home.section.6.1a.button', 'get in touch')}
+          id="club-kitchen-get-in-touch"
           arrowVariant="right"
           variant={{ type: 'primary', size: 'large' }}
           onClick={() => setIsFormOpen(true)}

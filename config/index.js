@@ -8,21 +8,25 @@ const defaultConfig = {
 
 const config = {
   local: {
-    BACKEND_URL: 'http://localhost:5000'
+    BACKEND_URL: 'http://localhost:5000',
+    FRONTEND_URL: 'https://clubkitchen.dev.k8s.concordswift.com'
   },
   development: {
     BACKEND_URL: 'https://turtle.dev.k8s.concordswift.com',
     CDN_URL: 'https://drt4kfy6qmaeq.cloudfront.net/',
+    FRONTEND_URL: 'https://clubkitchen.dev.k8s.concordswift.com',
     isDev: true
   },
   demo: {
     BACKEND_URL: 'https://turtle-demo.machobear.ca',
     CDN_URL: 'https://cdn-dev.concordsites.com/club-kitchen/',
+    FRONTEND_URL: 'https://clubkitchen.demo.k8s.concordswift.com',
     isDev: true
   },
   production: {
     BACKEND_URL: 'https://be.concordmetrotown.com',
-    CDN_URL: 'https://cdn.concordsites.com/club-kitchen/'
+    CDN_URL: 'https://cdn.concordsites.com/club-kitchen/',
+    FRONTEND_URL: 'https://clubkitchen.ca'
   }
 }
 

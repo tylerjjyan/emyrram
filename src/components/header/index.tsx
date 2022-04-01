@@ -124,6 +124,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
                   text={t('component.header.contact_us.text', 'Contact Us')}
                   customStyle={customButtonStyle}
                   onClick={() => setIsSidebarOpen(true)}
+                  id="club-kitchen-contact-us-menu"
                 />
               )}
               <LanguageSwitcher theme={languageButtonVariant} />

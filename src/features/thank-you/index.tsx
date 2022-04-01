@@ -14,6 +14,7 @@ const ThankYou = (): JSX.Element => {
       }}
       layoutStyle={layoutStyle}
       customSeoTags={<meta name="robots" content="noindex,nofollow"></meta>}
+      path="/thank-you"
     >
       <PageSection
         backgroundTheme="light"
