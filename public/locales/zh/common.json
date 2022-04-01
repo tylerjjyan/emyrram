@@ -62,5 +62,14 @@
   "faq.section.2.1a.button": "聯系我們",
   "component.header.contact_us.text": "聯系我們",
   "privacy_policy.hero.1.1a.title": "隱私條款",
-  "terms.hero.1.1a.title": "條款和服務"
+  "terms.hero.1.1a.title": "條款和服務",
+  "contact_us.form.email_address.text": "電子郵箱",
+  "contact_us.form.full_name.text": "姓名",
+  "contact_us.form.phone_number.text": "電話號碼",
+  "contact_us.form.job_title.text": "職位名稱",
+  "contact_us.form.restaurant_count.text": "餐廳數量",
+  "contact_us.form.business_name.text": "公司名稱",
+  "contact_us.form.title": "聯絡我們",
+  "contact_us.form.text": "我們很高興與尋找下一個\n發展機會的頂級餐廳建立聯繫。",
+  "contact_us.form.submit.button": "提交"
 }

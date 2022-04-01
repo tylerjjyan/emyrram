@@ -5,6 +5,7 @@ import Form from './form'
 import 'react-modern-drawer/dist/index.css'
 import { ReactComponent as XCircleSVG } from './x-circle.svg'
 import { sidebarContainer, svgWrapper } from './index.css'
+import { useTranslation } from 'next-i18next'
 
 interface ContactUsProps {
   isOpen: boolean
@@ -15,6 +16,7 @@ const ContactUsSidebar: React.FC<ContactUsProps> = ({
   isOpen,
   toggleSidebar
 }) => {
+  const { t } = useTranslation()
   return (
     <Drawer
       open={isOpen}
@@ -26,10 +28,17 @@ const ContactUsSidebar: React.FC<ContactUsProps> = ({
       <div className={svgWrapper}>
         <XCircleSVG onClick={toggleSidebar} />
       </div>
-      <Heading text="Contact Us" variant="h5" marginBottom="8px" />
+      <Heading
+        text={t('contact_us.form.title', 'Contact Us')}
+        variant="h5"
+        marginBottom="8px"
+      />
       <Paragraph
-        text={`We’re happy to connect with great restaurants looking for their next
-      opportunity to grow.`}
+        text={t(
+          'contact_us.form.text',
+          `We’re happy to connect with great restaurants looking for their next
+      opportunity to grow.`
+        )}
         variant="medium"
         style={textSprinkles({ marginBottom: ['32px', '16px'] })}
       />

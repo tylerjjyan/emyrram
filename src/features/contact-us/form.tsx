@@ -1,7 +1,9 @@
 import classNames from 'classnames'
+import { useTranslation } from 'next-i18next'
 import { formContainer, input, wrapper, label, buttonBase } from './form.css'
 
 const ContactUsForm = (): JSX.Element => {
+  const { t } = useTranslation()
   return (
     <form
       action="https://machobear.us14.list-manage.com/subscribe/post?u=eb9f58a9f9f65c3f093576ce0&amp;id=9c2c2f819b"
@@ -13,7 +15,8 @@ const ContactUsForm = (): JSX.Element => {
     >
       <div className={wrapper}>
         <label htmlFor="mce-EMAIL" className={label}>
-          Email Address <span className="asterisk">*</span>
+          {t('contact_us.form.email_address.text', 'Email Address')}{' '}
+          <span className="asterisk">*</span>
         </label>
         <input
           type="email"
@@ -25,7 +28,8 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <div className={wrapper}>
         <label htmlFor="mce-FULLNAME" className={label}>
-          Full Name <span className="asterisk">*</span>
+          {t('contact_us.form.full_name.text', 'Full Name')}{' '}
+          <span className="asterisk">*</span>
         </label>
         <input
           type="text"
@@ -37,7 +41,8 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <div className={wrapper}>
         <label htmlFor="mce-PHONE" className={label}>
-          Phone Number <span className="asterisk">*</span>
+          {t('contact_us.form.phone_number.text', 'Phone Number')}{' '}
+          <span className="asterisk">*</span>
         </label>
         <input
           type="text"
@@ -49,7 +54,8 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <div className={wrapper}>
         <label htmlFor="mce-JOBTITLE" className={label}>
-          Job Title <span className="asterisk">*</span>
+          {t('contact_us.form.job_title.text', 'Job Title')}{' '}
+          <span className="asterisk">*</span>
         </label>
         <input
           type="text"
@@ -61,7 +67,8 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <div className={wrapper}>
         <label htmlFor="mce-RCOUNT" className={label}>
-          Restaurant Count <span className="asterisk">*</span>
+          {t('contact_us.form.restaurant_count.text', 'Restaurant Count')}{' '}
+          <span className="asterisk">*</span>
         </label>
         <select
           name="RCOUNT"
@@ -75,7 +82,7 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <div className={wrapper}>
         <label htmlFor="mce-BNAME" className={label}>
-          Business Name
+          {t('contact_us.form.business_name.text', 'Business Name')}{' '}
         </label>
         <input type="text" name="BNAME" className={input} id="mce-BNAME" />
       </div>
@@ -93,7 +100,7 @@ const ContactUsForm = (): JSX.Element => {
       <input
         type="submit"
         value="Submit"
-        name="Submit"
+        name={t('contact_us.form.submit.button', 'Submit')}
         id="mc-embedded-subscribe"
         className={buttonBase}
       />

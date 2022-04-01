@@ -62,5 +62,14 @@
   "faq.section.2.1a.button": "get in touch",
   "component.header.contact_us.text": "Contact Us",
   "privacy_policy.hero.1.1a.title": "Privacy Policy",
-  "terms.hero.1.1a.title": "Terms of Service"
+  "terms.hero.1.1a.title": "Terms of Service",
+  "contact_us.form.email_address.text": "Email Address",
+  "contact_us.form.full_name.text": "Full Name",
+  "contact_us.form.phone_number.text": "Phone Number",
+  "contact_us.form.job_title.text": "Job Title",
+  "contact_us.form.restaurant_count.text": "Restaurant Count",
+  "contact_us.form.business_name.text": "Business Name",
+  "contact_us.form.title": "Contact Us",
+  "contact_us.form.text": "We’re happy to connect with great restaurants looking for their next\n      opportunity to grow.",
+  "contact_us.form.submit.button": "Submit"
 }
