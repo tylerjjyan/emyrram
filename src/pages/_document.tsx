@@ -23,6 +23,12 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link
+            href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <link rel="stylesheet" href="https://use.typekit.net/kha8wum.css" />
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{

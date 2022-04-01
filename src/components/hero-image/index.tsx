@@ -17,8 +17,6 @@ const HeroImage: React.FC<HeroImageProps> = ({
         src={src}
         objectFit="cover"
         layout="fill"
-        width="100%"
-        height="100%"
         priority
       />
       {children}

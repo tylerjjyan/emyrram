@@ -65,13 +65,8 @@ const Head: React.FC<HeadProps> = props => {
         <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
         <link rel="apple-touch-icon" href="/static/touch-icon.png" />
         <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
-        <link rel="stylesheet" href="https://use.typekit.net/kha8wum.css" />
+        d
         <link rel="icon" href="/static/favicon.ico" />
-        <link
-          href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"
-          rel="stylesheet"
-          type="text/css"
-        />
         <meta
           property="og:locale"
           content={CurrentLang() === 'zh' ? 'zh_CN' : 'en_CA'}
