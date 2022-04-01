@@ -4,7 +4,7 @@ import PageSection, { sprinkles } from '@/components/page-section'
 import { Paragraph } from '@/components/typography'
 import Hero from './hero'
 import PrivacySection from './privacy-section'
-import { listWrapper } from './index.css'
+import { listWrapper, textLink } from './index.css'
 
 const PRIVACY_CONTENT = [
   {
@@ -22,9 +22,19 @@ const PRIVACY_CONTENT = [
               variant="medium"
               text={`“Cookies” are data files that are placed on your device or computer and
               often include an anonymous unique identifier. For more information about
-              cookies, and how to disable cookies, visit
-              https://www.allaboutcookies.org.`}
-            />
+              cookies, and how to disable cookies, visit `}
+            >
+              <span>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.allaboutcookies.org"
+                  className={textLink}
+                >
+                  https://www.allaboutcookies.org
+                </a>
+              </span>
+            </Paragraph>
           </li>
           <li>
             <Paragraph
@@ -89,8 +99,19 @@ const PRIVACY_CONTENT = [
           interest to you. For more information about how targeted advertising
           works, you can visit the Network Advertising Initiative’s (“NAI”)
           educational page at
-          http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.`}
-        />
+          `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work"
+              className={textLink}
+            >
+              http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.
+            </a>
+          </span>
+        </Paragraph>
       </>
     )
   },
@@ -116,16 +137,41 @@ const PRIVACY_CONTENT = [
           variant="medium"
           text={`For more information on the privacy practices of Google, please visit
           the Google Privacy Terms web page:
-          https://www.google.com/intl/en/policies/privacy/.`}
-        />
+          `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.google.com/intl/en/policies/privacy/"
+              className={textLink}
+            >
+              https://www.google.com/intl/en/policies/privacy/.
+            </a>
+          </span>
+        </Paragraph>
         <Paragraph
           variant="medium"
           text={`You can opt-out of having your activity on our Services made available
-          to Google Analytics by installing the Google Analytics opt-out browser
-          add-on. The add-on prevents the Google Analytics JavaScript (ga.js,
-          analytics.js, and dc.js) from sharing information with Google Analytics
-          about your activity on the Services.`}
-        />
+          to Google Analytics by installing the Google Analytics `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://tools.google.com/dlpage/gaoptout/"
+              className={textLink}
+            >
+              opt-out browser add-on.
+            </a>
+          </span>
+          <span>
+            {' '}
+            The add-on prevents the Google Analytics JavaScript (ga.js,
+            analytics.js, and dc.js) from sharing information with Google
+            Analytics about your activity on the Services.
+          </span>
+        </Paragraph>
         <Paragraph
           variant="medium"
           text={`We use Facebook interest-based advertising and Facebook Pixel. You can
@@ -138,9 +184,19 @@ const PRIVACY_CONTENT = [
         <Paragraph
           variant="medium"
           text={`For more information on the privacy practices of Facebook, please visit
-          Facebook's Data Policy page:
-          https://www.facebook.com/privacy/explanation.`}
-        />
+          Facebook's Data Policy page: `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.facebook.com/privacy/explanation"
+              className={textLink}
+            >
+              https://www.facebook.com/privacy/explanation.
+            </a>
+          </span>
+        </Paragraph>
       </>
     )
   },
@@ -217,8 +273,20 @@ const PRIVACY_CONTENT = [
           variant="medium"
           text={`For more information about our privacy practices, if you have questions,
         or if you would like to make a complaint, please contact us by e-mail at
-        support@clubkitchen.ca or by mail using the details provided below:`}
-        />
+       `}
+        >
+          <span>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="mailto:support@clubkitchen.ca"
+              className={textLink}
+            >
+              support@clubkitchen.ca
+            </a>
+          </span>{' '}
+          <span>or by mail using the details provided below:</span>
+        </Paragraph>
         <Paragraph
           variant="medium"
           text={`89 Nelson St., Vancouver, BC, V6Z 0E7, Canada`}

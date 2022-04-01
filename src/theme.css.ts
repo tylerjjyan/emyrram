@@ -22,7 +22,8 @@ export const vars = createGlobalTheme(':root', {
     black: '#000000',
     transparent: 'transparent',
     pureWhite: '#FFFFFF',
-    error: '#DC1D1D'
+    error: '#DC1D1D',
+    link: '#1d74dc'
   },
   fonts: {
     heading: 'neue-haas-grotesk-display',
