@@ -1,4 +1,4 @@
-import { style, styleVariants } from '@vanilla-extract/css'
+import { globalStyle, style, styleVariants } from '@vanilla-extract/css'
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes'
 import { vars } from '@/theme.css'
 
@@ -56,6 +56,9 @@ export const header = recipe({
     '@media': {
       'screen and (max-width: 767px)': {
         padding: '24px'
+      },
+      'screen and (max-width: 599px)': {
+        height: '60px'
       }
     }
   },
@@ -119,4 +122,12 @@ export const customButtion = style({
 
 export const contentWrapper = style({
   padding: '32px 24px'
+})
+
+globalStyle(`${logoWrapper} > svg`, {
+  '@media': {
+    'screen and (max-width: 599px)': {
+      transform: 'scale(0.7)'
+    }
+  }
 })
