@@ -99,10 +99,11 @@ export const deliveryIconContainer = style({
 })
 
 globalStyle(`${deliveryIconContainer} img`, {
-  maxWidth: '32%',
-  height: 'auto'
+  width: '31%',
+  height: 'auto',
+  objectFit: 'contain'
 })
 
 globalStyle(`${deliveryIconContainer} > :not(:last-child)`, {
-  marginRight: '3px'
+  marginRight: '5px'
 })
