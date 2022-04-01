@@ -2,11 +2,16 @@ import React from 'react'
 import Layout from '@/components/layout'
 import PageSection, { sprinkles } from '@/components/page-section'
 import Hero from './hero'
-import FAQSection from './faq'
+import FAQSection from './section-one'
+import SectionTwo from './section-two'
 import { useTranslation } from 'next-i18next'
+import { useContactForm } from '@/hooks/use-contact-form'
+import ContactUsSidebar from '../contact-us'
 
 const FAQ = (): JSX.Element => {
   const { t } = useTranslation()
+  const { isFormOpen, toggleForm } = useContactForm()
+
   return (
     <Layout
       title={t(
@@ -30,6 +35,15 @@ const FAQ = (): JSX.Element => {
       >
         <FAQSection />
       </PageSection>
+      <PageSection
+        customStyle={sprinkles({
+          paddingX: ['64px', '64px', '24px', '24px'],
+          paddingY: ['112px', '80px', '64px', '64px']
+        })}
+      >
+        <SectionTwo />
+      </PageSection>
+      <ContactUsSidebar isOpen={isFormOpen} toggleSidebar={toggleForm} />
     </Layout>
   )
 }
