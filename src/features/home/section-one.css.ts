@@ -34,5 +34,11 @@ export const imageStyle = style({
   width: '100%',
   height: '100%',
   minHeight: '362px',
-  objectFit: 'contain'
+  objectFit: 'contain',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      minHeight: 'unset'
+    }
+  }
 })
