@@ -17,9 +17,12 @@ import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
 import ContactUsSidebar from '@/features/contact-us'
 import LanguageSwitcher, { LanguageButtonType } from '../language-switcher'
 import Logo from './logo'
+import { useTranslation } from 'next-i18next'
+
+type HeaderConfigType = HeaderVariants & { isButtonVisible?: boolean }
 
 interface HeaderProps {
-  config: HeaderVariants
+  config: HeaderConfig
 }
 
 const HEADER_CONFIG = {
@@ -47,9 +50,11 @@ const HEADER_CONFIG = {
 }
 
 const Header: React.FC<HeaderProps> = ({ config }) => {
+  const { t } = useTranslation()
   const [forceTheme, setForceTheme] = useState<
     keyof typeof HEADER_CONFIG | undefined
   >()
+  const { isButtonVisible = true, ...restConfig } = config
   const [isOpen, setIsOpen] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
@@ -103,7 +108,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   return (
     <>
       {!isOpen && (
-        <div className={header({ ...config, background: forceTheme })}>
+        <div className={header({ ...restConfig, background: forceTheme })}>
           <Logo logoIcon={LogoSVG}></Logo>
           {displayMobile ? (
             <div className={navigationWrapper}>
@@ -113,12 +118,14 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
           ) : (
             <div className={navigationWrapper}>
               <NavigationBar colorTheme={navigationVariant} />
-              <Button
-                variant={buttonVariant}
-                text="Contact Us"
-                customStyle={customButtonStyle}
-                onClick={() => setIsSidebarOpen(true)}
-              />
+              {isButtonVisible && (
+                <Button
+                  variant={buttonVariant}
+                  text={t('component.header.contact_us.text', 'Contact Us')}
+                  customStyle={customButtonStyle}
+                  onClick={() => setIsSidebarOpen(true)}
+                />
+              )}
               <LanguageSwitcher theme={languageButtonVariant} />
             </div>
           )}
@@ -131,4 +138,4 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
 }
 
 export default Header
-export type HeaderConfig = HeaderVariants
+export type HeaderConfig = HeaderConfigType

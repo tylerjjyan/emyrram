@@ -1,10 +1,12 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { Heading, Paragraph } from '@/components/typography'
 import { Button } from '@/components/button'
 import { thankYouWrapper, svgWrapper } from './content.css'
 import { ReactComponent as DeliverySVG } from './delivery.svg'
 
 const ThankYouContent = (): JSX.Element => {
+  const router = useRouter()
   return (
     <div className={thankYouWrapper}>
       <div className={svgWrapper}>
@@ -22,6 +24,7 @@ const ThankYouContent = (): JSX.Element => {
           marginBottom="48px"
         />
         <Button
+          onClick={() => router.push('/')}
           text="Back to dashboard"
           variant={{ type: 'primary', size: 'large' }}
         />

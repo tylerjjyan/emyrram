@@ -7,7 +7,11 @@ import { layoutStyle } from './index.css'
 const ThankYou = (): JSX.Element => {
   return (
     <Layout
-      headerConfig={{ background: 'secondary', position: 'sticky' }}
+      headerConfig={{
+        background: 'secondary',
+        position: 'sticky',
+        isButtonVisible: false
+      }}
       layoutStyle={layoutStyle}
     >
       <PageSection
