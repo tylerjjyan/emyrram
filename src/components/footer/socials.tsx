@@ -1,6 +1,6 @@
 import { vars } from '@/theme.css'
 import socialConfig from 'config/social'
-import SocialIcons from './social-icons'
+// import SocialIcons from './social-icons'
 import { Paragraph } from '../typography'
 import { wrapper, copyrightWrapper, customTextStyle } from './socials.css'
 import { useTranslation } from 'next-i18next'
@@ -49,7 +49,7 @@ const Socials = (): JSX.Element => {
   return (
     <div className={wrapper}>
       <CopyrightText />
-      <SocialIcons />
+      {/* <SocialIcons /> */}
     </div>
   )
 }
