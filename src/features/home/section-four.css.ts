@@ -11,11 +11,9 @@ export const leftWrapper = style({
   width: '100%',
   maxWidth: '536px',
   paddingTop: '128px',
+  marginRight: '24px',
 
   '@media': {
-    'screen and (max-width: 1096px)': {
-      marginRight: '24px'
-    },
     'screen and (max-width: 767px)': {
       marginRight: '0',
       maxWidth: 'unset',
@@ -27,7 +25,7 @@ export const leftWrapper = style({
 export const imageWrapper = style({
   width: '100%',
   maxWidth: '670px',
-  height: 'auto',
+  height: '100%',
   background: vars.colors.neutral10,
   borderRadius: '0px 0px 0px 160px',
 
@@ -39,24 +37,18 @@ export const imageWrapper = style({
 })
 
 export const offerImageWrapper = style({
-  visibility: 'hidden',
+  display: 'none',
 
   '@media': {
     'screen and (max-width: 767px)': {
-      visibility: 'visible',
+      display: 'block',
       width: '100%',
-      height: '400px',
+      height: '100%',
+      maxHeight: '400px',
       background: vars.colors.neutral10,
       borderRadius: '40px 0px 0px 0px',
+      objectFit: 'cover',
       marginBottom: '24px'
     }
   }
-})
-
-export const slideshowContainer = style({
-  width: '100%',
-  maxWidth: '670px',
-  height: 'auto',
-  background: vars.colors.neutral10,
-  borderRadius: '0px 0px 0px 160px'
 })

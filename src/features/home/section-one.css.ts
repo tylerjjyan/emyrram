@@ -1,4 +1,3 @@
-import { vars } from '@/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const sectionWrapper = style({
@@ -17,6 +16,7 @@ export const textWrapper = style({
   display: 'flex',
   flexDirection: 'column',
   marginRight: '48px',
+  flex: 1,
 
   '@media': {
     'screen and (max-width: 767px)': {
@@ -25,15 +25,14 @@ export const textWrapper = style({
   }
 })
 
-export const videoContainer = style({
+export const imageContainer = style({
   width: '100%',
-  height: '362px',
-  background: vars.colors.neutral10,
-  borderRadius: '0px 80px 0px 0px',
+  flex: 1
+})
 
-  '@media': {
-    'screen and (max-width: 767px)': {
-      borderRadius: '0px 40px 0px 0px'
-    }
-  }
+export const imageStyle = style({
+  width: '100%',
+  height: '100%',
+  minHeight: '362px',
+  objectFit: 'contain'
 })

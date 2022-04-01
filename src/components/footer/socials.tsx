@@ -2,11 +2,13 @@ import { vars } from '@/theme.css'
 import socialConfig from 'config/social'
 import SocialIcons from './social-icons'
 import { Paragraph } from '../typography'
-import { wrapper, copyrightWrapper } from './socials.css'
+import { wrapper, copyrightWrapper, customTextStyle } from './socials.css'
+import { useTranslation } from 'next-i18next'
 
-const { DEVELOPER, PRIVACY_POLICY } = socialConfig
+const { DEVELOPER } = socialConfig
 
 const CopyrightText = (): JSX.Element => {
+  const { t } = useTranslation()
   return (
     <div className={copyrightWrapper}>
       <Paragraph
@@ -18,11 +20,12 @@ const CopyrightText = (): JSX.Element => {
         id="footer-privacy"
         rel="noopener noreferrer"
         target="_blank"
-        href={PRIVACY_POLICY}
+        href="/privacy-policy"
+        className={customTextStyle}
       >
         <Paragraph
           variant="xSmall"
-          text={`Privacy`}
+          text={t('component.footer.privacy.text', `Privacy`)}
           textColor={vars.colors.pureWhite}
         />
       </a>
@@ -30,11 +33,12 @@ const CopyrightText = (): JSX.Element => {
         id="footer-terms"
         rel="noopener noreferrer"
         target="_blank"
-        href={PRIVACY_POLICY}
+        href="/terms"
+        className={customTextStyle}
       >
         <Paragraph
           variant="xSmall"
-          text={`Terms`}
+          text={t('component.footer.terms.text', `Terms`)}
           textColor={vars.colors.pureWhite}
         />
       </a>

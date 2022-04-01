@@ -54,5 +54,16 @@ globalStyle(`${contentWrapper} > :not(:last-child)`, {
 })
 
 export const customTextStyle = style({
-  textTransform: 'uppercase'
+  textTransform: 'uppercase',
+  fontFamily: vars.fonts.heading
+})
+
+export const emailLinkStyle = style({
+  textDecoration: 'none',
+  cursor: 'pointer',
+
+  ':hover': {
+    opacity: 0.7,
+    transition: vars.transitions.opacity
+  }
 })

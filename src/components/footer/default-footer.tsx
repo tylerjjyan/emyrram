@@ -5,12 +5,15 @@ import {
   footerWrapper,
   upperWrapper,
   contentWrapper,
-  customTextStyle
+  customTextStyle,
+  emailLinkStyle
 } from './index.css'
 import { ReactComponent as LogoSVG } from './icons/Logo.svg'
 import Socials from './socials'
+import { useTranslation } from 'next-i18next'
 
 const DefaultFooter = (): JSX.Element => {
+  const { t } = useTranslation()
   return (
     <div className={footerWrapper}>
       <div className={upperWrapper}>
@@ -19,7 +22,7 @@ const DefaultFooter = (): JSX.Element => {
           <div>
             <Paragraph
               variant="xSmall"
-              text="Location"
+              text={t('component.footer.location.text', 'Location')}
               marginBottom="16px"
               style={customTextStyle}
               textColor={vars.colors.pureWhite}
@@ -43,22 +46,21 @@ const DefaultFooter = (): JSX.Element => {
           <div>
             <Paragraph
               variant="xSmall"
-              text="Contact Us"
+              text={t('component.footer.contact_us.text', 'Contact Us')}
               marginBottom="16px"
               style={customTextStyle}
               textColor={vars.colors.pureWhite}
             />
-            <Paragraph
-              variant="xSmall"
-              text="Email: [email address]"
-              textColor={vars.colors.pureWhite}
-              marginBottom="8px"
-            />
-            <Paragraph
-              variant="xSmall"
-              text="Phone: [phone #]"
-              textColor={vars.colors.pureWhite}
-            />
+            <a
+              href="mailto:info@clubkitchen.ca?subject=[Info Request] Club Kitchen"
+              className={emailLinkStyle}
+            >
+              <Paragraph
+                variant="xSmall"
+                text="Email: info@clubkitchen.ca"
+                textColor={vars.colors.pureWhite}
+              />
+            </a>
           </div>
         </div>
       </div>

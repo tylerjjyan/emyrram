@@ -15,7 +15,7 @@ export const sidebarContainer = style({
   padding: '48px 64px',
 
   '@media': {
-    'screen and (max-width: 767px)': {
+    'screen and (max-width: 1096px)': {
       padding: '48px'
     },
     'screen and (max-width: 599px)': {
@@ -36,7 +36,7 @@ export const svgWrapper = style({
   marginBottom: '80px',
 
   '@media': {
-    'screen and (max-width: 767px)': {
+    'screen and (max-width: 1096px)': {
       marginBottom: '40px'
     }
   }

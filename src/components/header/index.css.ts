@@ -93,6 +93,15 @@ export const header = recipe({
   }
 })
 
+export const logoWrapper = style({
+  cursor: 'pointer',
+
+  ':hover': {
+    opacity: 0.7,
+    transition: vars.transitions.opacity
+  }
+})
+
 export type HeaderVariants = RecipeVariants<typeof header>
 
 export const navigationWrapper = style({

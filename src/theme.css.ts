@@ -25,8 +25,8 @@ export const vars = createGlobalTheme(':root', {
     error: '#DC1D1D'
   },
   fonts: {
-    heading: 'haboro-contrast-condensed',
-    body: 'neue-haas-unica'
+    heading: 'neue-haas-grotesk-display',
+    body: 'lato'
   },
   lineHeights: {
     xSmall: '16px',

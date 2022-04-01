@@ -1,4 +1,3 @@
-import { vars } from '@/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const contentWrapper = style({
@@ -32,7 +31,21 @@ export const leftWrapper = style({
 
 export const imageWrapper = style({
   width: '100%',
-  height: '480px',
-  background: vars.colors.neutral10,
-  borderRadius: '40px 0px 0px 0px'
+  height: '100%',
+
+  '@media': {
+    'screen and (max-width: 1096px)': {
+      marginRight: '24px'
+    },
+
+    'screen and (max-width: 767px)': {
+      margin: '0 0 32px 0'
+    }
+  }
+})
+
+export const imageStyle = style({
+  width: '100%',
+  height: '100%',
+  objectFit: 'contain'
 })

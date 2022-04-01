@@ -3,15 +3,17 @@ import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import { sectionWrapper, textWrapper } from './section-six.css'
 import { useContactForm } from '@/hooks/use-contact-form'
+import { useTranslation } from 'next-i18next'
 
 const SectionSix = (): JSX.Element => {
   const { setIsFormOpen } = useContactForm()
+  const { t } = useTranslation()
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
         <Heading
           variant="h2"
-          text="Ready to get started?"
+          text={t('home.section.6.1a.title', 'Ready to get started?')}
           marginBottom="16px"
           style={textSprinkles({
             typeSize: ['h2', 'h4'],
@@ -20,14 +22,17 @@ const SectionSix = (): JSX.Element => {
         />
         <Paragraph
           variant="medium"
-          text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Leo suspendisse
-        maecenas fermentum, hac id dignissim dui. Vitae ut nisi nibh pellentesque
-        nunc, ultrices mauris.`}
+          text={t(
+            'home.section.6.1a.text',
+            `We’d love to tell you more about what Club Kitchen can offer your
+          growing business. Get in touch with us today for inquiries about
+          pricing, getting started, or anything else you might be curious about.`
+          )}
           marginBottom="48px"
           style={textSprinkles({ textAlign: ['center', 'left'] })}
         />
         <ArrowButton
-          text="join the club"
+          text={t('home.section.6.1a.button', 'get in touch')}
           arrowVariant="right"
           variant={{ type: 'primary', size: 'large' }}
           onClick={() => setIsFormOpen(true)}

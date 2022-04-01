@@ -16,6 +16,7 @@ import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
 import ContactUsSidebar from '@/features/contact-us'
 import LanguageSwitcher, { LanguageButtonType } from '../language-switcher'
+import Logo from './logo'
 
 interface HeaderProps {
   config: HeaderVariants
@@ -103,7 +104,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
     <>
       {!isOpen && (
         <div className={header({ ...config, background: forceTheme })}>
-          <LogoSVG />
+          <Logo logoIcon={LogoSVG}></Logo>
           {displayMobile ? (
             <div className={navigationWrapper}>
               <MenuSVG onClick={() => setIsOpen(true)} />

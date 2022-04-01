@@ -28,10 +28,15 @@ export const titleVariants = styleVariants({
 })
 
 export const svgWrapper = style({
-  marginLeft: '20px'
+  marginLeft: '20px',
+
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginLeft: '10px'
+    }
+  }
 })
 
-globalStyle(`${titleVariants['active']} > svg`, {
-  transition: 'all 0.3s ease-in-out',
+globalStyle(`${titleVariants['active']} svg`, {
   transform: 'rotate(-180deg)'
 })

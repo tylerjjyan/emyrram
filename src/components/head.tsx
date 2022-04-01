@@ -22,13 +22,13 @@ const Head: React.FC<HeadProps> = props => {
   const { t } = useTranslation()
   const defaultTitle = t(
     'component.head.title',
-    'Concord Sky | Live At The Heart Of Toronto'
+    'Club Kitchen | Premier Commissary Kitchen Vancouver'
   )
   const defaultDescription = t(
     'component.head.text',
-    `Concord Sky is poised to be one of the tallest residential towers in
-    Canada. Live at the epicentre of Toronto on Yonge Street with
-    unparalleled convenience.`
+    `Club Kitchen is the ultimate commissary kitchen in Vancouver. From
+    logistics to order fulfilment, everything's taken care of so your time
+    is spent on cooking.`
   )
   const defaultURL = FRONTEND_URL
   const defaultPath = ''
@@ -65,7 +65,7 @@ const Head: React.FC<HeadProps> = props => {
         <link rel="icon" sizes="192x192" href="/static/touch-icon.png" />
         <link rel="apple-touch-icon" href="/static/touch-icon.png" />
         <link rel="mask-icon" href="/static/favicon-mask.svg" color="#49B882" />
-        <link rel="stylesheet" href="https://use.typekit.net/psc5xru.css" />
+        <link rel="stylesheet" href="https://use.typekit.net/kha8wum.css" />
         <link rel="icon" href="/static/favicon.ico" />
         <link
           href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css"

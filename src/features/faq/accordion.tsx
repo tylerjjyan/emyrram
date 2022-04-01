@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 import {
   accordionWrapper,
   titleVariants,
-  contentWrapper
+  contentWrapper,
+  svgWrapper
 } from './accordion.css'
 import { ReactComponent as ArrowDownSVG } from './arrow-down.svg'
 
@@ -28,7 +29,9 @@ const FAQAccordion: React.FC<AccordionProps> = ({
         onKeyDown={() => setIsActive(!isActive)}
       >
         <Heading variant="h6" text={title} />
-        <ArrowDownSVG />
+        <div className={svgWrapper}>
+          <ArrowDownSVG />
+        </div>
       </div>
       {isActive && (
         <div className={contentWrapper}>

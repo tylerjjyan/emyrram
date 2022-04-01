@@ -22,14 +22,14 @@ const NavigationBar: React.FC<NavigationProps> = ({
   const [t] = useTranslation()
 
   const routes = [
-    {
-      href: '/efficiency',
-      name: t('component.navigation_bar.efficiency.title', 'Efficiency')
-    },
-    {
-      href: '/kitchen',
-      name: t('component.navigation_bar.kitchen.title', 'Kitchen')
-    },
+    // {
+    //   href: '/efficiency',
+    //   name: t('component.navigation_bar.efficiency.title', 'Efficiency')
+    // },
+    // {
+    //   href: '/kitchen',
+    //   name: t('component.navigation_bar.kitchen.title', 'Kitchen')
+    // },
     {
       href: '/faq',
       name: t('component.navigation_bar.faq.title', 'FAQ')

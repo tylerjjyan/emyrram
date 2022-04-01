@@ -11,6 +11,7 @@ export const buttonBase = style({
   borderRadius: '24px',
   padding: '8px 32px',
   textTransform: 'uppercase',
+  fontFamily: vars.fonts.heading,
 
   ':hover': {
     color: vars.colors.black,

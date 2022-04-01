@@ -42,6 +42,7 @@ const itemBase = style({
   width: 'fit-content',
   fontSize: vars.fontSizes.medium,
   lineHeight: vars.lineHeights.medium,
+  fontFamily: vars.fonts.heading,
   textTransform: 'uppercase',
   textDecoration: 'none',
   paddingBottom: '1px',
@@ -65,10 +66,14 @@ export const navigationItem = recipe({
   base: itemBase,
   variants: {
     horizontal: {
-      true: {},
+      true: {
+        letterSpacing: '0.08em'
+      },
       false: {
         fontSize: vars.fontSizes.h5,
         lineHeight: vars.fontSizes.h5,
+        letterSpacing: '0.005em',
+
         textTransform: 'none',
         textDecoration: 'none',
 
