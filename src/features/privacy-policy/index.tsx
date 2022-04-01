@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '@/components/layout'
 import PageSection, { sprinkles } from '@/components/page-section'
 import { Paragraph } from '@/components/typography'
+import Hero from './hero'
 import PrivacySection from './privacy-section'
 import { listWrapper } from './index.css'
 
@@ -216,11 +217,11 @@ const PRIVACY_CONTENT = [
           variant="medium"
           text={`For more information about our privacy practices, if you have questions,
         or if you would like to make a complaint, please contact us by e-mail at
-        jj@clubkitchen.ca or by mail using the details provided below:`}
+        support@clubkitchen.ca or by mail using the details provided below:`}
         />
         <Paragraph
           variant="medium"
-          text={`900-1095 West Pender St, Vancouver, BC, V6E 2M6, Canada`}
+          text={`89 Nelson St., Vancouver, BC, V6Z 0E7, Canada`}
         />
       </>
     )
@@ -230,8 +231,12 @@ const PRIVACY_CONTENT = [
 const PrivacyPolicy = (): JSX.Element => {
   return (
     <Layout headerConfig={{ background: 'secondary', position: 'static' }}>
+      <Hero />
       <PageSection
-        customStyle={sprinkles({ paddingY: ['152px', '80px'] })}
+        customStyle={sprinkles({
+          paddingY: ['152px', '80px'],
+          paddingX: ['24px']
+        })}
         maxWidth="856px"
       >
         <Paragraph
