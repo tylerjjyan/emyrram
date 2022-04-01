@@ -6,12 +6,16 @@ import {
   imageContainer,
   backImageWrapper,
   forwardImageWrapper,
-  imageStyle
+  imageStyle,
+  deliveryIconContainer
 } from './section-five.css'
 import { useTranslation } from 'next-i18next'
 import SectionImage from '@/components/section-image'
 import HomeSection51 from '@/images/home/home.section.5.1.png'
 import HomeSection52 from '@/images/home/home.section.5.2.jpg'
+import Doordash from './icons/doordash.png'
+import SkipTheDishes from './icons/skip-the-dishes.png'
+import UberEats from './icons/uber-eats.png'
 
 const SectionFive = (): JSX.Element => {
   const { t } = useTranslation()
@@ -49,7 +53,7 @@ const SectionFive = (): JSX.Element => {
           <SectionImage
             src={HomeSection52}
             mobileSrc={HomeSection52}
-            alt=""
+            alt="efficiency"
             customStyle={imageStyle}
           />
         </div>
@@ -57,9 +61,14 @@ const SectionFive = (): JSX.Element => {
           <SectionImage
             src={HomeSection51}
             mobileSrc={HomeSection51}
-            alt=""
+            alt="efficiency"
             customStyle={imageStyle}
           />
+        </div>
+        <div className={deliveryIconContainer}>
+          <img src={SkipTheDishes} alt="skip the dishes icon" />
+          <img src={Doordash} alt="doordash icon" />
+          <img src={UberEats} alt="uber eats icon" />
         </div>
       </div>
     </div>

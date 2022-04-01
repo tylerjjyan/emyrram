@@ -1,5 +1,5 @@
 import { vars } from '@/theme.css'
-import { style } from '@vanilla-extract/css'
+import { globalStyle, style } from '@vanilla-extract/css'
 
 export const sectionWrapper = style({
   display: 'flex',
@@ -87,4 +87,22 @@ export const imageStyle = style({
   width: '100%',
   height: '100%',
   objectFit: 'cover'
+})
+
+export const deliveryIconContainer = style({
+  position: 'absolute',
+  bottom: '15px',
+  right: 0,
+  display: 'flex',
+  justifyContent: 'space-between',
+  width: '44.5%'
+})
+
+globalStyle(`${deliveryIconContainer} img`, {
+  maxWidth: '32%',
+  height: 'auto'
+})
+
+globalStyle(`${deliveryIconContainer} > :not(:last-child)`, {
+  marginRight: '3px'
 })
