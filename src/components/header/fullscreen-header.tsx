@@ -4,12 +4,14 @@ import NavigationBar from '@/components/navigation-bar'
 import { header, customButtion, contentWrapper, wrapper } from './index.css'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as XCircleSVG } from './icons/x-circle.svg'
+import { useContactForm } from '@/hooks/use-contact-form'
 
 interface HeaderProps {
   setIsOpen: (a: boolean) => void
 }
 
 const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
+  const { setIsFormOpen } = useContactForm()
   return (
     <div className={wrapper}>
       <div
@@ -25,6 +27,7 @@ const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
           text="Contact Us"
           id="club-kitchen-contact-us-menu"
           customStyle={customButtion}
+          onClick={() => setIsFormOpen(true)}
         />
       </div>
     </div>
