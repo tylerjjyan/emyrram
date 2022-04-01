@@ -15,7 +15,11 @@ export const titleBase = style({
   boxSizing: 'border-box',
   padding: '32px 16px',
   margin: '0 auto',
-  cursor: 'pointer'
+  cursor: 'pointer',
+
+  ':hover': {
+    opacity: 0.7
+  }
 })
 
 export const contentWrapper = style({
@@ -38,5 +42,11 @@ export const svgWrapper = style({
 })
 
 globalStyle(`${titleVariants['active']} svg`, {
-  transform: 'rotate(-180deg)'
+  transform: 'rotate(-180deg)',
+  transition: 'all 0.3s ease-in-out'
+})
+
+globalStyle(`${titleVariants['inactive']} svg`, {
+  transform: 'rotate(0deg)',
+  transition: 'all 0.3s ease-in-out'
 })
