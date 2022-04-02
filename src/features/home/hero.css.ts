@@ -7,7 +7,7 @@ export const heroTextWrapper = style({
   left: 0,
   transform: 'translate(0, -50%)',
   padding: '0px 32px',
-  maxWidth: '644px',
+  maxWidth: '720px',
   zIndex: vars.zIndex.hero,
 
   '@media': {
