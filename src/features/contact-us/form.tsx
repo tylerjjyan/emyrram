@@ -4,6 +4,7 @@ import { formContainer, input, wrapper, label, buttonBase } from './form.css'
 
 const ContactUsForm = (): JSX.Element => {
   const { t } = useTranslation()
+  const submitText = t('contact_us.form.submit.button', 'Submit') as string
   return (
     <form
       action="https://machobear.us14.list-manage.com/subscribe/post?u=eb9f58a9f9f65c3f093576ce0&amp;id=9c2c2f819b"
@@ -99,8 +100,8 @@ const ContactUsForm = (): JSX.Element => {
       </div>
       <input
         type="submit"
-        value="Submit"
-        name={t('contact_us.form.submit.button', 'Submit')}
+        value={submitText}
+        name="Submit"
         id="mc-embedded-subscribe"
         className={buttonBase}
       />

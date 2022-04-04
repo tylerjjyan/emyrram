@@ -54,7 +54,7 @@ export const buttonBase = style({
   color: vars.colors.pureWhite,
   background: vars.colors.neutral80,
   border: `1px solid ${vars.colors.neutral80}`,
-  margin: 0,
+  margin: `0 !important`,
 
   ':hover': {
     color: vars.colors.black,
