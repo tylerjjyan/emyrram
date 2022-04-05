@@ -20,7 +20,7 @@ const ThankYou = (): JSX.Element => {
         backgroundTheme="light"
         maxWidth="912px"
         customStyle={sprinkles({
-          paddingY: ['152px'],
+          paddingY: { default: '152px', ipadMini: '80px' },
           paddingX: '24px'
         })}
       >
