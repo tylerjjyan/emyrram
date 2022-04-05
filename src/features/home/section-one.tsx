@@ -8,7 +8,7 @@ import {
   imageContainer,
   imageStyle
 } from './section-one.css'
-import HomeSection11Mobile from '@/images/home/home.section.1.1.mobile.png'
+import HomeSection11 from '@/images/home/home.section.1.1.png'
 
 const Section01 = (): JSX.Element => {
   const { t } = useTranslation()
@@ -40,8 +40,8 @@ const Section01 = (): JSX.Element => {
       <div className={imageContainer}>
         <SectionImage
           alt="cost comparison"
-          src={HomeSection11Mobile}
-          mobileSrc={HomeSection11Mobile}
+          src={HomeSection11}
+          mobileSrc={HomeSection11}
           customStyle={imageStyle}
         />
       </div>

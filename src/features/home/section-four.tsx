@@ -33,17 +33,17 @@ const SectionFour = (): JSX.Element => {
           />
           <Heading
             variant="h5"
-            text={t('home.section.4.2a.title', 'Ultra-Efficient Kitchens')}
+            text={t('home.section.4.2a.title', 'Ready when you are')}
             marginBottom="8px"
           />
           <Paragraph
             variant="medium"
             text={t(
               'home.section.4.2a.text',
-              `We go beyond the ordinary commissary with kitchen spaces designed by
-            chefs, for chefs. Our turnkey kitchens come loaded with over $40,000
-            worth of high-quality appliances and equipment, so you can start
-            prepping food right away.`
+              `We go beyond the ordinary commissary with commercial-ready kitchen
+              spaces designed by chefs, for chefs. Our turnkey kitchens are ready
+              for action as soon as you are, outfitted with all the appliances and
+              equipment you need to start prepping food right away.`
             )}
             marginBottom="40px"
           />
@@ -55,10 +55,7 @@ const SectionFour = (): JSX.Element => {
           />
           <Heading
             variant="h5"
-            text={t(
-              'home.section.4.3a.title',
-              'Fresher Food, Lower Delivery Fees'
-            )}
+            text={t('home.section.4.3a.title', 'Fresher Food Faster')}
             marginBottom="8px"
             style={textSprinkles({ typeSize: ['h5', 'h6'] })}
           />
@@ -66,10 +63,10 @@ const SectionFour = (): JSX.Element => {
             variant="medium"
             text={t(
               'home.section.4.3a.text',
-              `Club Kitchen’s location in the heart of densely populated Yaletown
-            gives you access to over 100,000 potential customers within 3km,
-            ensuring that your product arrives fresh, with lower delivery fees for
-            your customers.`
+              `Club Kitchen’s premier location in the heart of densely populated
+              Yaletown allows us to deliver fresher food, faster. You'll have access
+              to over 100,000 potential customers within a 3km radius, ensuring that
+              your product arrives fresh every time.`
             )}
             marginBottom="40px"
           />

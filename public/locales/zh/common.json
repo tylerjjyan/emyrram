@@ -16,10 +16,6 @@
   "home.section.5.1b.title": "重拾美味和高效",
   "home.section.5.1a.text": "Club Kitchen智能共享餐廳內標配平板電腦，內置廚房管理系統\n為您帶來便捷的支付、訂單跟蹤解決方案， \n。我們的團隊也將在現場隨時待命，確保美食能夠高效、準時地發出。 ",
   "home.section.4.1a.title": "服務",
-  "home.section.4.2a.title": "高效智能廚房",
-  "home.section.4.2a.text": "我們的智能共享餐廳是為專業廚師打造， 配備價值超過$40,000的高端電器和設備，可隨時開始。",
-  "home.section.4.3a.title": "更新鮮的食物，更優惠的價格",
-  "home.section.4.3a.text": "Club Kitchen智能共享餐廳位於溫哥華人口密度較大的耶魯鎮，坐標3公裏內居住著大約100, 000名潛在客戶。核心區域選址也確保了食物能夠新鮮配送，且運費更低。",
   "home.section.4.4a.title": "專屬定製",
   "home.section.4.4a.text": "Club Kitchen智能共享餐廳是為即時配送而設計的現代餐廳模式。在我們團隊的助力下，廚師更能關註美食，發揮創意。",
   "home.section.1.1a.title": "快速實現目標",
@@ -35,7 +31,6 @@
   "home.section.3.3a.title": "10分鐘",
   "home.section.3.3a.text": "步行可至BC Place、Rogers Arena、Yaletown等地標。",
   "home.section.3.4a.title": "更低的價格",
-  "home.section.3.4a.text": "戰略位置",
   "home.section.2.2a.title": "快速起步",
   "home.section.2.2a.text": "在短短7天內開一間美食餐廳！絕佳地址、高端設備全部到位！我們還將幫助您取得營業許可。",
   "home.section.2.2b.title": "加急訂單交接",
@@ -71,5 +66,10 @@
   "contact_us.form.business_name.text": "公司名稱",
   "contact_us.form.title": "聯絡我們",
   "contact_us.form.text": "我們很高興與尋找下一個\n發展機會的頂級餐廳建立聯繫。",
-  "contact_us.form.submit.button": "提交"
+  "contact_us.form.submit.button": "提交",
+  "home.section.4.2a.title": "一切就緒",
+  "home.section.4.2a.text": "Club Kitchen是為廚師打造配備全套高端電器和設備的專業商業廚房，一旦入駐可隨時開始。",
+  "home.section.4.3a.title": "美味速達",
+  "home.section.4.3a.text": "Club Kitchen智能共享餐廳位於溫哥華市中心人口密度較大的耶魯鎮，周邊3公裏內居住著大約100, 000名潛在客戶。核心區域的選址確保食物美味新鮮，快速配送。",
+  "home.section.3.4a.text": "通過戰略合作夥伴和共享運營成本"
 }

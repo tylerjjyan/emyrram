@@ -79,7 +79,10 @@ const SectionThree = (): JSX.Element => {
           />
           <Paragraph
             variant="medium"
-            text={t('home.section.3.4a.text', 'through strategic locations')}
+            text={t(
+              'home.section.3.4a.text',
+              'through strategic partners and shared operation costs'
+            )}
           />
         </div>
       </div>

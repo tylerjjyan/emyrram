@@ -16,10 +16,6 @@
   "home.section.5.1b.title": "Helping you achieve maximum efficiency",
   "home.section.5.1a.text": "One tablet lets you manage all your orders with a built-in operating\n          system, payment solutions, and order tracking so you can streamline your\n          behind-the-scenes operations. Our on-site concierge team is there to make\n          sure food goes out efficiently and accurately, every time.",
   "home.section.4.1a.title": "What we offer",
-  "home.section.4.2a.title": "Ultra-Efficient Kitchens",
-  "home.section.4.2a.text": "We go beyond the ordinary commissary with kitchen spaces designed by\n            chefs, for chefs. Our turnkey kitchens come loaded with over $40,000\n            worth of high-quality appliances and equipment, so you can start\n            prepping food right away.",
-  "home.section.4.3a.title": "Fresher Food, Lower Delivery Fees",
-  "home.section.4.3a.text": "Club Kitchen’s location in the heart of densely populated Yaletown\n            gives you access to over 100,000 potential customers within 3km,\n            ensuring that your product arrives fresh, with lower delivery fees for\n            your customers.",
   "home.section.4.4a.title": "Purpose-Built",
   "home.section.4.4a.text": "From top to bottom, Club Kitchen is designed for efficient\n          delivery-based service. Purpose-built kitchens let you focus on\n          developing and executing your concept, while our concierge team takes\n          care of food hand-offs while you handle the cooking.",
   "home.section.1.1a.title": "A faster way to achieve your business goals",
@@ -35,7 +31,6 @@
   "home.section.3.3a.title": "10 min.",
   "home.section.3.3a.text": "walking distance from BC Place, Rogers Arena, Yaletown & more",
   "home.section.3.4a.title": "Lower fees",
-  "home.section.3.4a.text": "through strategic locations",
   "home.section.2.2a.title": "Lightning-Fast Setup",
   "home.section.2.2a.text": "Open your kitchen in as little as 7 days. We take care of construction\n    and equipment, and assist with permitting to make it faster and more\n    affordable to open a delivery-ready restaurant, complete with\n    top-of-the-line equipment and appliances.",
   "home.section.2.2b.title": "Expedited Order Hand-Offs",
@@ -71,5 +66,10 @@
   "contact_us.form.business_name.text": "Business Name",
   "contact_us.form.title": "Contact Us",
   "contact_us.form.text": "We’re happy to connect with great restaurants looking for their next\n      opportunity to grow.",
-  "contact_us.form.submit.button": "Submit"
+  "contact_us.form.submit.button": "Submit",
+  "home.section.4.2a.title": "Ready when you are",
+  "home.section.4.2a.text": "We go beyond the ordinary commissary with commercial-ready kitchen\n              spaces designed by chefs, for chefs. Our turnkey kitchens are ready\n              for action as soon as you are, outfitted with all the appliances and\n              equipment you need to start prepping food right away.",
+  "home.section.4.3a.title": "Fresher Food Faster",
+  "home.section.4.3a.text": "Club Kitchen’s premier location in the heart of densely populated\n              Yaletown allows us to deliver fresher food, faster. You'll have access\n              to over 100,000 potential customers within a 3km radius, ensuring that\n              your product arrives fresh every time.",
+  "home.section.3.4a.text": "through strategic partners and shared operation costs"
 }
