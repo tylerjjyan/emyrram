@@ -5,6 +5,7 @@ import { header, customButtion, contentWrapper, wrapper } from './index.css'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as XCircleSVG } from './icons/x-circle.svg'
 import { useContactForm } from '@/hooks/use-contact-form'
+import Logo from './logo'
 
 interface HeaderProps {
   setIsOpen: (a: boolean) => void
@@ -17,7 +18,7 @@ const FullScreenHeader: React.FC<HeaderProps> = ({ setIsOpen }) => {
       <div
         className={header({ background: 'transparent', position: 'static' })}
       >
-        <LogoDarkSVG />
+        <Logo logoIcon={LogoDarkSVG} />
         <XCircleSVG onClick={() => setIsOpen(false)} />
       </div>
       <div className={contentWrapper}>

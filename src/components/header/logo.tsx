@@ -8,11 +8,9 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ logoIcon: LogoIcon }): JSX.Element => (
   <Link href="/">
-    <a>
-      <div className={logoWrapper}>
-        <LogoIcon />
-      </div>
-    </a>
+    <div className={logoWrapper}>
+      <LogoIcon />
+    </div>
   </Link>
 )
 
