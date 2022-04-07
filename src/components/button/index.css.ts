@@ -12,6 +12,7 @@ export const buttonBase = style({
   padding: '8px 32px',
   textTransform: 'uppercase',
   fontFamily: vars.fonts.heading,
+  transition: 'all 0.3s ease-in-out',
 
   ':hover': {
     color: vars.colors.black,
