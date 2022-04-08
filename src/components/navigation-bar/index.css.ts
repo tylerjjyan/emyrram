@@ -16,6 +16,7 @@ export const navigationWrapperVariants = styleVariants({
 export const itemVariants = styleVariants({
   dark: {
     color: vars.colors.black,
+    borderColor: vars.colors.black,
 
     ':after': {
       display: 'block',
@@ -27,6 +28,7 @@ export const itemVariants = styleVariants({
   },
   light: {
     color: vars.colors.pureWhite,
+    borderColor: vars.colors.pureWhite,
 
     ':after': {
       display: 'block',
@@ -45,7 +47,6 @@ const itemBase = style({
   fontFamily: vars.fonts.heading,
   textTransform: 'uppercase',
   textDecoration: 'none',
-  paddingBottom: '1px',
 
   selectors: {
     '&:not(:last-child)': {
@@ -86,7 +87,11 @@ export const navigationItem = recipe({
     },
     active: {
       true: {
-        borderBottom: `solid 2px ${vars.colors.pureWhite}`
+        borderBottom: `solid 2px`,
+
+        ':after': {
+          display: 'none'
+        }
       },
       false: {
         borderBottom: 'none'

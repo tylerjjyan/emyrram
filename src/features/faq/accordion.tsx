@@ -33,11 +33,9 @@ const FAQAccordion: React.FC<AccordionProps> = ({
           <ArrowDownSVG />
         </div>
       </div>
-      {isActive && (
-        <div className={contentWrapper}>
-          <Paragraph variant="medium" text={content} />
-        </div>
-      )}
+      <div className={contentWrapper[isActive ? 'active' : 'inactive']}>
+        <Paragraph variant="medium" text={content} />
+      </div>
     </div>
   )
 }

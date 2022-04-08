@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion, MotionConfig } from 'framer-motion'
+import useAnimateOnInView from '@/hooks/use-animate-on-in-view'
 import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import {
   sectionWrapper,
@@ -17,8 +19,32 @@ import Doordash from './icons/doordash.png'
 import SkipTheDishes from './icons/skip-the-dishes.png'
 import UberEats from './icons/uber-eats.png'
 
+const backImageVariants = {
+  visible: {
+    x: 0,
+    y: 0
+  },
+  hidden: {
+    x: -25,
+    y: 25
+  }
+}
+
+const frontImageVariants = {
+  visible: {
+    x: 0,
+    y: 0
+  },
+  hidden: {
+    x: 25,
+    y: 25
+  }
+}
+
 const SectionFive = (): JSX.Element => {
   const { t } = useTranslation()
+  const { ref: imageWrapperRef, controls } = useAnimateOnInView()
+
   return (
     <div className={sectionWrapper}>
       <div className={textWrapper}>
@@ -48,29 +74,43 @@ const SectionFive = (): JSX.Element => {
           )}
         />
       </div>
-      <div className={imageContainer}>
-        <div className={backImageWrapper}>
-          <SectionImage
-            src={HomeSection52}
-            mobileSrc={HomeSection52}
-            alt="efficiency"
-            customStyle={imageStyle}
-          />
-        </div>
-        <div className={forwardImageWrapper}>
-          <SectionImage
-            src={HomeSection51}
-            mobileSrc={HomeSection51}
-            alt="efficiency"
-            customStyle={imageStyle}
-          />
-        </div>
+      <motion.div ref={imageWrapperRef} className={imageContainer}>
+        <MotionConfig transition={{ duration: 1 }} reducedMotion="user">
+          <motion.div
+            className={backImageWrapper}
+            variants={backImageVariants}
+            initial="hidden"
+            animate={controls}
+          >
+            <SectionImage
+              src={HomeSection52}
+              mobileSrc={HomeSection52}
+              alt="efficiency"
+              customStyle={imageStyle}
+            />
+          </motion.div>
+        </MotionConfig>
+        <MotionConfig transition={{ duration: 1 }} reducedMotion="user">
+          <motion.div
+            variants={frontImageVariants}
+            initial="hidden"
+            animate={controls}
+            className={forwardImageWrapper}
+          >
+            <SectionImage
+              src={HomeSection51}
+              mobileSrc={HomeSection51}
+              alt="efficiency"
+              customStyle={imageStyle}
+            />
+          </motion.div>
+        </MotionConfig>
         <div className={deliveryIconContainer}>
           <img src={SkipTheDishes} alt="skip the dishes icon" />
           <img src={Doordash} alt="doordash icon" />
           <img src={UberEats} alt="uber eats icon" />
         </div>
-      </div>
+      </motion.div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '@/components/layout'
 import PageSection, { sprinkles } from '@/components/page-section'
 import { useContactForm } from '@/hooks/use-contact-form'
+import AnimateIn from '@/components/animate-in'
 import HeroSection from './hero'
 import SectionOne from './section-one'
 import SectionTwo from './section-two'
@@ -22,7 +23,9 @@ const Home = (): JSX.Element => {
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >
-        <SectionOne />
+        <AnimateIn>
+          <SectionOne />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -31,7 +34,9 @@ const Home = (): JSX.Element => {
         })}
         backgroundTheme="light"
       >
-        <SectionTwo />
+        <AnimateIn>
+          <SectionTwo />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -40,7 +45,9 @@ const Home = (): JSX.Element => {
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >
-        <SectionThree />
+        <AnimateIn>
+          <SectionThree />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -51,7 +58,9 @@ const Home = (): JSX.Element => {
         })}
         backgroundTheme="light"
       >
-        <SectionFour />
+        <AnimateIn>
+          <SectionFour />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -68,7 +77,9 @@ const Home = (): JSX.Element => {
           paddingBottom: ['80px', '48px', '48px', '24px']
         })}
       >
-        <SectionSix />
+        <AnimateIn>
+          <SectionSix />
+        </AnimateIn>
       </PageSection>
       <ContactUsSidebar isOpen={isFormOpen} toggleSidebar={toggleForm} />
     </Layout>
