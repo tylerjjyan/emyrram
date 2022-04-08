@@ -40,5 +40,5 @@ export const imageStyle = style({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
-  borderRadius: '0 0 80px 0'
+  borderRadius: '0 0 0 80px'
 })

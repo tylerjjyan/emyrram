@@ -160,17 +160,17 @@ const ComparisonAccordion = (): JSX.Element => {
                 textAlign="right"
               />
               <Paragraph
-                variant="large"
+                variant="medium"
                 text={t('kitchens.section.3.7b.text', `Equipment Lease`)}
                 textAlign="right"
               />
               <Paragraph
-                variant="large"
+                variant="medium"
                 text={t('kitchens.section.3.7c.text', `Shared Operating Costs`)}
                 textAlign="right"
               />
               <Paragraph
-                variant="large"
+                variant="medium"
                 text={t('kitchens.section.3.7d.text', `Revenue Share`)}
                 textAlign="right"
               />
@@ -192,7 +192,7 @@ const ComparisonAccordion = (): JSX.Element => {
                 textAlign="right"
               />
               <Paragraph
-                variant="large"
+                variant="medium"
                 text={t('kitchens.section.3.7f.text', `Up to $30,000/month`)}
                 textAlign="right"
               />
