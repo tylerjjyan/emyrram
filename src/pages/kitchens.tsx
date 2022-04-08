@@ -1,9 +1,9 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GetStaticProps } from 'next'
-import FAQFeature from '@/features/faq'
+import KitchensFeature from '@/features/kitchens'
 
-export default function FAQ(): JSX.Element {
-  return <FAQFeature />
+export default function Kitchens(): JSX.Element {
+  return <KitchensFeature />
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = '' }) => {

@@ -71,6 +71,7 @@ globalStyle(`${listItem}:not(:last-child) :before`, {
 
 globalStyle(`${listItemIconWrapper} > svg`, {
   zIndex: 2,
+  width: '24px',
 
   '@media': {
     'screen and (max-width: 767px)': {

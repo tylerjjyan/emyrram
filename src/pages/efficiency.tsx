@@ -1,9 +1,9 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { GetStaticProps } from 'next'
-import FAQFeature from '@/features/faq'
+import EfficiencyFeature from '@/features/efficiency'
 
-export default function FAQ(): JSX.Element {
-  return <FAQFeature />
+export default function Efficiency(): JSX.Element {
+  return <EfficiencyFeature />
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale = '' }) => {

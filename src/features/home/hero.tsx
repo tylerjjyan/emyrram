@@ -1,12 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'next-i18next'
+import { vars } from '@/theme.css'
 import HeroImage from '@/components/hero-image'
 import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import { useContactForm } from '@/hooks/use-contact-form'
 import Hero from '@/images/home/home.hero.png'
-import { vars } from '@/theme.css'
 import { heroTextWrapper } from './hero.css'
-import { useTranslation } from 'next-i18next'
 
 const HeroSection = (): JSX.Element => {
   const { t } = useTranslation()

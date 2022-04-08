@@ -103,9 +103,9 @@ const Head: React.FC<HeadProps> = props => {
           content={CanonicalUrl(props.path || defaultPath)}
         />
         <meta name="twitter:image" content={props.ogImage || defaultOGImage} />
-        {prefetchImages.map((config: any, index: number) => (
+        {prefetchImages.map((imageConfig: any, index: number) => (
           <React.Fragment key={index}>
-            {config.mobile.map((image: any, i: number) => (
+            {imageConfig.mobile.map((image: any, i: number) => (
               <link
                 rel="prefetch"
                 key={i}
@@ -114,7 +114,7 @@ const Head: React.FC<HeadProps> = props => {
                 media="(max-width: 600px)"
               />
             ))}
-            {config.desktop.map((image: any, i: number) => (
+            {imageConfig.desktop.map((image: any, i: number) => (
               <link rel="prefetch" key={i} href={image} as="image" />
             ))}
           </React.Fragment>
