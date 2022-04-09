@@ -50,6 +50,7 @@ const Section01 = (): JSX.Element => {
           variant={{ type: 'primary', size: 'large' }}
           text={t('kitchens.section.1.1a.button', '360-View')}
           endIcon={GlobeSVG}
+          id="club-kitchen-kitchens-360-view"
           onClick={() =>
             window.open('https://panoraven.com/en/embed/VkB6LmA2w1', '_blank')
           }

@@ -10,8 +10,10 @@ import SectionTwo from './section-two'
 import SectionThree from './section-three'
 import SectionFour from './section-four'
 import ContactUsSidebar from '../contact-us'
+import { useTranslation } from 'next-i18next'
 
 const Efficiency = (): JSX.Element => {
+  const { t } = useTranslation()
   const { isFormOpen, toggleForm } = useContactForm()
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
 
@@ -22,6 +24,16 @@ const Efficiency = (): JSX.Element => {
         background: displayMobile ? 'transparent' : 'secondary',
         position: 'fixed'
       }}
+      title={t(
+        'efficiency.head.title',
+        `Club Kitchen | Commercial and Commissary Kitchen Vancouver`
+      )}
+      description={t(
+        'efficiency.head.text',
+        `Club Kitchen will handle all front-of-house operations - order logistics,
+        food hand-offs, building services. So you can focus on cooking & growing
+        your business.`
+      )}
     >
       <HeroSection />
       <PageSection

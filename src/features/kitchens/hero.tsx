@@ -28,6 +28,7 @@ const Hero = (): JSX.Element => {
           variant={{ type: 'secondary', size: 'large' }}
           text={t('kitchens.hero.1.1a.button', 'Join the club')}
           arrowVariant="right"
+          id="club-kitchen-kitchens-join-club"
           onClick={() => setIsFormOpen(true)}
         />
       </div>

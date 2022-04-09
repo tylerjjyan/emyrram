@@ -52,6 +52,7 @@ const Hero = (): JSX.Element => {
           }}
           text={t('efficiency.hero.1.1a.button', 'Join the club')}
           arrowVariant="right"
+          id="club-kitchen-efficiency-join-club"
           onClick={() => setIsFormOpen(true)}
         />
       </div>

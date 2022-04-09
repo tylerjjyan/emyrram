@@ -9,13 +9,25 @@ import SectionTwo from './section-two'
 import SectionThree from './section-three'
 import SectionFour from './section-four'
 import ContactUsSidebar from '../contact-us'
+import { useTranslation } from 'next-i18next'
 
 const Kitchens = (): JSX.Element => {
+  const { t } = useTranslation()
   const { isFormOpen, toggleForm } = useContactForm()
   return (
     <Layout
-      path="/efficiency"
+      path="/kitchens"
       headerConfig={{ background: 'transparent', position: 'fixed' }}
+      title={t(
+        'kitchens.head.title',
+        `Club Kitchen | Commissary Kitchen For Rent Vancouver`
+      )}
+      description={t(
+        'kitchens.head.text',
+        `Club Kitchen’s purpose-built kitchens make it quick & easy to create the
+        food you’ve dreamed of. Equipped with all appliances, open your kitchen 7
+        days or less.`
+      )}
     >
       <HeroSection />
       <PageSection

@@ -22,7 +22,7 @@ const SectionFour = (): JSX.Element => {
         />
         <ArrowButton
           text={t('efficiency.section.4.1a.button', 'get in touch')}
-          id="club-kitchen-get-in-touch"
+          id="club-kitchen-efficiency-get-in-touch"
           arrowVariant="right"
           variant={{ type: 'primary', size: 'large' }}
           onClick={() => setIsFormOpen(true)}
