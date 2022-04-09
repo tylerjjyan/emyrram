@@ -25,10 +25,7 @@ const Section01 = (): JSX.Element => {
       <div className={textWrapper}>
         <Heading
           variant="h2"
-          text={t(
-            'efficiency.section.1.1a.title',
-            'Your own dedicated front-of-house team'
-          )}
+          text={t('efficiency.section.1.1a.title', 'We’ve got you covered')}
           marginBottom="16px"
           style={textSprinkles({
             fontSize: ['h2', 'h4'],

@@ -76,7 +76,6 @@
   "efficiency.hero.1.1a.button": "加入俱樂部",
   "efficiency.section.4.1a.title": "立即體驗！",
   "efficiency.section.4.1a.button": "聯系我們",
-  "efficiency.section.1.1a.title": "專屬前臺團隊",
   "efficiency.section.1.1a.text": "Club Kitchen團隊將幫助您處理訂單管理等事宜。小型團隊不但人力成本較低，而且能即時處理前臺運營工作，例如食物配送、物流、房屋服務和維護、采購等工作。作為廚師，您只需要關註烹飪和餐廳運營。",
   "efficiency.section.3.1a.title": "高效規範的訂單管理",
   "efficiency.section.3.1a.text": "集中訂單管理系統，讓您使用一個平板電腦就可以輕松處理來自不同平臺的訂單。通過與Club Kitchen戰略合作夥伴緊密協作，Club Kitchen為餐廳提供尖端POS 技術。對創業者來說這種配置不但成本較低，而且可以全方位掌握用戶數據，以及享受便捷的支付和訂單跟蹤功能。",
@@ -120,8 +119,9 @@
   "kitchens.section.3.7e.text": "5+ 年",
   "kitchens.section.3.7f.text": "最高 $30,000/月",
   "kitchens.section.3.1a.title": "Club Kitchen 與傳統餐廳比較",
-  "efficiency.head.title": "Club Kitchen | Commercial and Commissary Kitchen Vancouver",
-  "efficiency.head.text": "Club Kitchen will handle all front-of-house operations - order logistics,\n        food hand-offs, building services. So you can focus on cooking & growing\n        your business.",
-  "kitchens.head.title": "Club Kitchen | Commissary Kitchen For Rent Vancouver",
-  "kitchens.head.text": "Club Kitchen’s purpose-built kitchens make it quick & easy to create the\n        food you’ve dreamed of. Equipped with all appliances, open your kitchen 7\n        days or less."
+  "efficiency.head.title": "Club Kitchen | 溫哥華商業和共享廚房",
+  "efficiency.head.text": "Club Kitchen 將接管所有前廳操作 - 包括訂單物流、\n 食品交接、以及房屋設備。因此，您可以專注於烹飪和發展\n 您的業務。",
+  "kitchens.head.title": "Club Kitchen | 溫哥華共享廚房出租",
+  "kitchens.head.text": "Club Kitchen 的专用厨房可以让您快速轻松地制作您梦寐以求的食物。這裡配备所有电器，租賃 7\n 天或更短时间就能開啟您的厨房。",
+  "efficiency.section.1.1a.title": "我们为您提供保障"
 }
