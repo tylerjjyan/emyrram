@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '@/components/layout'
 import PageSection, { sprinkles } from '@/components/page-section'
+import AnimateIn from '@/components/animate-in'
 import { useContactForm } from '@/hooks/use-contact-form'
 import HeroSection from './hero'
 import SectionOne from './section-one'
@@ -23,7 +24,9 @@ const Kitchens = (): JSX.Element => {
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >
-        <SectionOne />
+        <AnimateIn>
+          <SectionOne />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -34,7 +37,9 @@ const Kitchens = (): JSX.Element => {
         })}
         backgroundTheme="light"
       >
-        <SectionTwo />
+        <AnimateIn>
+          <SectionTwo />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -42,7 +47,9 @@ const Kitchens = (): JSX.Element => {
           paddingY: ['128px', '80px', '64px', '64px']
         })}
       >
-        <SectionThree />
+        <AnimateIn>
+          <SectionThree />
+        </AnimateIn>
       </PageSection>
       <PageSection
         customStyle={sprinkles({
@@ -50,7 +57,9 @@ const Kitchens = (): JSX.Element => {
           paddingBottom: ['80px', '48px', '48px', '24px']
         })}
       >
-        <SectionFour />
+        <AnimateIn>
+          <SectionFour />
+        </AnimateIn>
       </PageSection>
       <ContactUsSidebar isOpen={isFormOpen} toggleSidebar={toggleForm} />
     </Layout>
