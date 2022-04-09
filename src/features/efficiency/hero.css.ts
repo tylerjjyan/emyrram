@@ -1,5 +1,21 @@
 import { vars } from '@/theme.css'
-import { style, styleVariants } from '@vanilla-extract/css'
+import { style, styleVariants, keyframes } from '@vanilla-extract/css'
+
+const appear = keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translate(50px, -50%)'
+  },
+
+  '75%': {
+    opacity: 0.6,
+    transform: 'translate(0px, -50%)'
+  },
+
+  '100%': {
+    opacity: 1
+  }
+})
 
 export const heroWrapper = style({
   position: 'relative',
@@ -14,6 +30,7 @@ export const contentWrapper = style({
   top: '50%',
   left: '0',
   transform: 'translate(0, -50%)',
+  animation: `${appear} 1s`,
   padding: '0 0 0 64px',
   maxWidth: '600px',
 
