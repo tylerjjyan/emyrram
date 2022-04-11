@@ -13,8 +13,20 @@ const PRIVACY_CONTENT = [
       <>
         <Paragraph
           variant="medium"
-          text={` When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as “Device Information.” 
-          We collect Device Information using the following technologies: `}
+          marginBottom="24px"
+          text={`When you visit the Site, we automatically collect certain information
+          about your device, including information about your web browser, IP
+          address, time zone, and some of the cookies that are installed on your
+          device. Additionally, as you browse the Site, we collect information
+          about the individual web pages that you view, what websites or search
+          terms referred you to the Site, and information about how you interact
+          with the Site. We refer to this automatically-collected information as
+          “Device Information.”
+         `}
+        />
+        <Paragraph
+          variant="medium"
+          text="We collect Device Information using the following technologies: "
         />
         <ul className={listWrapper}>
           <li>
@@ -52,15 +64,33 @@ const PRIVACY_CONTENT = [
             />
           </li>
         </ul>
+      </>
+    )
+  },
+  {
+    title: 'How do we use your personal information?',
+    content: (
+      <>
         <Paragraph
           variant="medium"
-          text={`When we talk about “Personal Information” in this Privacy Policy, we are
-        talking both about Device Information and Order Information.`}
+          marginBottom="24px"
+          text={`We use the Device Information that we collect to help us screen for
+        potential risk and fraud (in particular, your IP address), and more
+        generally to improve and optimize our Site (for example, by generating
+        analytics about how our customers browse and interact with the Site, and
+        to assess the success of our marketing and advertising campaigns).`}
+        />
+        <Paragraph
+          variant="medium"
+          text={`We use Personal Information you submit to us to process requests, and to
+        keep you informed about your request status, respond to your inquiries,
+        notify you of services or special offers that may be of interest to you,
+        enforce our terms of use, and prevent potentially prohibited or illegal
+        activities for security purposes.`}
         />
       </>
     )
   },
-
   {
     title: 'Sharing Your Personal Information',
     content: (
@@ -76,6 +106,15 @@ const PRIVACY_CONTENT = [
           Information confidential, to use it only for the purposes for which we
           transfer it to them, and to process the Personal Information with
           standards at least as stringent as those set out in this policy.`}
+          marginBottom="24px"
+        />
+        <Paragraph
+          variant="medium"
+          text={`We may use and/or disclose anonymous "aggregated data" to third parties
+          to tailor your experience of the Site, help us analyze interest in areas
+          of the Site, the browsing patterns of its users in order to improve the
+          content, operation and design of the Site and get data for statistical
+          purposes to improve the Site.`}
           marginBottom="24px"
         />
         <Paragraph
@@ -153,7 +192,7 @@ const PRIVACY_CONTENT = [
         <Paragraph
           variant="medium"
           text={`You can opt-out of having your activity on our Services made available
-          to Google Analytics by installing the Google Analytics `}
+          to Google Analytics by installing the Google Analytics`}
         >
           <span>
             <a
@@ -211,30 +250,6 @@ const PRIVACY_CONTENT = [
     )
   },
   {
-    title: 'Your Rights',
-    content: (
-      <>
-        <Paragraph
-          variant="medium"
-          text={` If you are a European resident, you have the right to access personal
-          information we hold about you and to ask that your personal information
-          be corrected, updated, or deleted. If you would like to exercise this
-          right, please contact us through the contact information below.`}
-          marginBottom="24px"
-        />
-        <Paragraph
-          variant="medium"
-          text={`Additionally, if you are a European resident we note that we are
-          processing your information in order to fulfill contracts we might have
-          with you (for example if you make an order through the Site), or
-          otherwise to pursue our legitimate business interests listed above.
-          Additionally, please note that your information will be transferred
-          outside of Europe, including to Canada and the United States.`}
-        />
-      </>
-    )
-  },
-  {
     title: 'Data Retention',
     content: (
       <Paragraph
@@ -250,7 +265,14 @@ const PRIVACY_CONTENT = [
     content: (
       <Paragraph
         variant="medium"
-        text={`The Site is not intended for individuals under the age of 19.`}
+        text={`The Site is not intended for individuals under the age of 19. Children
+        are not permitted to use the Site or our services, and we request that
+        persons under the age 19 not submit any Personal Information to us. If
+        we learn we have collected or received Personal Information from a child
+        under the age of 13, we will delete that information. Since information
+        regarding children under the age of 13 is not collected, we do not
+        knowingly distribute Personal Information regarding children under the
+        age of 13.`}
       />
     )
   },
@@ -261,7 +283,12 @@ const PRIVACY_CONTENT = [
         variant="medium"
         text={`We may update this privacy policy from time to time in order to reflect,
         for example, changes to our practices or for other operational, legal or
-        regulatory reasons.`}
+        regulatory reasons. Modifications to the Policy will be posted on the
+        Site and will become effective on the day that they are posted. Your use
+        of the Site following any such change constitutes your agreement to be
+        bound by this Policy, as modified, changed or amended. For this reason,
+        we encourage you to review this Policy whenever you use the Site,
+        especially when you provide any Personal Information.`}
       />
     )
   },
@@ -272,8 +299,8 @@ const PRIVACY_CONTENT = [
         <Paragraph
           variant="medium"
           text={`For more information about our privacy practices, if you have questions,
-        or if you would like to make a complaint, please contact us by e-mail at
-       `}
+          or if you would like to make a complaint, please contact our privacy
+          compliance contact person by e-mail at `}
         >
           <span>
             <a
@@ -290,6 +317,17 @@ const PRIVACY_CONTENT = [
         <Paragraph
           variant="medium"
           text={`900-1095 West Pender St, Vancouver, BC, V6E 2M6, Canada`}
+        />
+      </>
+    )
+  },
+  {
+    title: 'Effective Date',
+    content: (
+      <>
+        <Paragraph
+          variant="medium"
+          text={`This Privacy Policy was last revised on: April 11, 2022`}
         />
       </>
     )
@@ -313,7 +351,24 @@ const PrivacyPolicy = (): JSX.Element => {
         <Paragraph
           variant="medium"
           marginBottom="32px"
-          text="This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from www.clubkitchen.ca (the “Site”). "
+          text={`This is the online Privacy Policy of Club Kitchen Management Inc. (“we”,
+            “us” or “Club Kitchen”). This Privacy Policy describes how your Personal
+            Information is collected, used, and shared when you visit
+            www.clubkitchen.ca (the “Site”) and applies only to information
+            collected by Club Kitchen through the Site and does not apply to
+            information collected by Club Kitchen otherwise. For the purpose of this
+            Privacy Policy, the term "Personal Information" includes any information
+            that identifies you as an individual such as your name, personal
+            address, telephone number and e-mail address.`}
+        />
+        <Paragraph
+          variant="medium"
+          marginBottom="24px"
+          text={`Your use of the Site indicates that you have read and accept our privacy
+          practices, as outlined in this Privacy Policy. If you do not agree to
+          the terms of this Policy, please do not use the Site. Please note that
+          your use of the Site is also subject to the Terms of Service also posted
+          on the Site.`}
         />
         {PRIVACY_CONTENT.map(({ title, content }, index) => {
           return (
