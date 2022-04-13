@@ -316,7 +316,7 @@ const PRIVACY_CONTENT = [
         </Paragraph>
         <Paragraph
           variant="medium"
-          text={`900-1095 West Pender St, Vancouver, BC, V6E 2M6, Canada`}
+          text={`988 Expo Blvd, Vancouver, BC, V67 0G2, Canada`}
         />
       </>
     )
