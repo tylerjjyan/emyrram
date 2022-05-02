@@ -85,7 +85,7 @@ const SectionThree = (): JSX.Element => {
           <td className={tableCell}>
             <Heading
               variant="h6"
-              text={t('kitchens.section.3.5a.text', `$40k`)}
+              text={t('kitchens.section.3.5a.text', `$50k`)}
             />
           </td>
           <td className={tableCell}>
