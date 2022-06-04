@@ -26,9 +26,7 @@ const Head: React.FC<HeadProps> = props => {
   )
   const defaultDescription = t(
     'component.head.text',
-    `EmyrRam is the ultimate commissary kitchen in Vancouver. From
-    logistics to order fulfilment, everything's taken care of so your time
-    is spent on cooking.`
+    `EmyrRam - The Best Chips in Canada`
   )
   const defaultURL = FRONTEND_URL
   const defaultPath = ''
