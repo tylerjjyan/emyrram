@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import { Button, ButtonVariantType } from '@/components/button'
 import NavigationBar, { NavigationBarType } from '@/components/navigation-bar'
 import useEventListener from '@/hooks/use-event-listener'
 import useMediaQuery from '@/hooks/use-media-query'
@@ -8,7 +7,6 @@ import {
   header,
   HeaderVariants,
   navigationWrapper,
-  customButtonStyle,
   cartWrapper
 } from './index.css'
 import { ReactComponent as LogoWhiteSVG } from './logo.svg'
@@ -16,9 +14,7 @@ import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
 import ContactUsSidebar from '@/features/contact-us'
-import LanguageSwitcher, { LanguageButtonType } from '../language-switcher'
 import Logo from './logo'
-import { useTranslation } from 'next-i18next'
 
 type HeaderConfigType = HeaderVariants & { isButtonVisible?: boolean }
 
@@ -51,28 +47,19 @@ const HEADER_CONFIG = {
 }
 
 const Header: React.FC<HeaderProps> = ({ config }) => {
-  const { t } = useTranslation()
   const [forceTheme, setForceTheme] = useState<
     keyof typeof HEADER_CONFIG | undefined
   >()
-  const { isButtonVisible = true, ...restConfig } = config
+  const { ...restConfig } = config
   const [isOpen, setIsOpen] = useState(false)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const displayMobile = useMediaQuery(`(max-width: 767px)`)
   const isTransparent = config?.background === 'transparent'
 
   const headerInfo = HEADER_CONFIG[forceTheme || 'transparent']
-  const {
-    logo: LogoSVG,
-    buttonConfig,
-    navigationConfig,
-    languageButtonConfig,
-    menu: MenuSVG
-  } = headerInfo
+  const { logo: LogoSVG, navigationConfig, menu: MenuSVG } = headerInfo
 
-  const buttonVariant = buttonConfig as ButtonVariantType
   const navigationVariant = navigationConfig as NavigationBarType
-  const languageButtonVariant = languageButtonConfig as LanguageButtonType
 
   const pastOffset = useCallback(() => {
     const offset = displayMobile ? 15 : 125
