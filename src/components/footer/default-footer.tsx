@@ -52,7 +52,7 @@ const DefaultFooter = (): JSX.Element => {
               textColor={vars.colors.pureWhite}
             />
             <a
-              href="mailto:info@clubkitchen.ca?subject=[Info Request] Club Kitchen"
+              href="mailto:info@clubkitchen.ca?subject=[Info Request] EmyrRam"
               className={emailLinkStyle}
             >
               <Paragraph

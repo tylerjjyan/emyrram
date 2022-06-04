@@ -1,5 +1,5 @@
 const socialConfig = {
-  DEVELOPER: 'Club Kitchen',
+  DEVELOPER: 'EmyrRam',
   DEVELOPER_WEBSITE: 'https://www.concordpacific.com/',
   FACEBOOK_URL: 'https://www.facebook.com/ConcordAdex/',
   INSTAGRAM_URL: 'https://www.instagram.com/concordadex/',

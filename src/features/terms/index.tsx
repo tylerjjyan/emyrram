@@ -14,8 +14,8 @@ const TERMS_CONTENT = [
         <Paragraph
           variant="medium"
           marginBottom="24px"
-          text={`This website is operated by Club Kitchen Management Inc.. Throughout the site, the
-          terms “we”, “us” and “our” refer to Club Kitchen Management Inc.. Club Kitchen Management Inc. offers
+          text={`This website is operated by EmyrRam Management Inc.. Throughout the site, the
+          terms “we”, “us” and “our” refer to EmyrRam Management Inc.. EmyrRam Management Inc. offers
           this website, including all information, tools and services available
           from this site to you, the user, conditioned upon your acceptance of
           all terms, conditions, policies and notices stated here.`}
@@ -44,10 +44,10 @@ const TERMS_CONTENT = [
         <Paragraph
           variant="medium"
           text={`These Terms of Service do not set out all the terms and conditions that
-          apply to customers of our Club Kitchen service. Those terms and
+          apply to customers of our EmyrRam service. Those terms and
           conditions would be set out in a separate contract, and these Terms of
           Service are subject to any such written contract that may be entered
-          into between us and a customer of our Club Kitchen service.`}
+          into between us and a customer of our EmyrRam service.`}
         />
         <Paragraph
           variant="medium"
@@ -302,7 +302,7 @@ const TERMS_CONTENT = [
         />
         <Paragraph
           variant="medium"
-          text={`In no case shall Club Kitchen Management Inc., our directors, officers,
+          text={`In no case shall EmyrRam Management Inc., our directors, officers,
           employees, affiliates, agents, contractors, interns, suppliers, service
           providers or licensors be liable for any injury, loss, claim, or any
           direct, indirect, incidental, punitive, special, or consequential
@@ -331,7 +331,7 @@ const TERMS_CONTENT = [
       <>
         <Paragraph
           variant="medium"
-          text={`You agree to indemnify, defend and hold harmless Club Kitchen Management
+          text={`You agree to indemnify, defend and hold harmless EmyrRam Management
           Inc. and our parent, subsidiaries, affiliates, partners, officers,
           directors, agents, contractors, licensors, service providers,
           subcontractors, suppliers, interns and employees, harmless from any
@@ -473,7 +473,7 @@ const TERMS_CONTENT = [
     title: '',
     content: (
       <>
-        <Paragraph variant="medium" text={`Club Kitchen Management Inc.`} />
+        <Paragraph variant="medium" text={`EmyrRam Management Inc.`} />
         <Paragraph
           variant="medium"
           text={`988 Expo Blvd, Vancouver, BC, V67 0G2, Canada`}

@@ -40,7 +40,7 @@ const Section01 = (): JSX.Element => {
           text={t(
             'efficiency.section.3.1a.text',
             `Manage delivery orders from multiple platforms with a single,
-            centralized tablet. Through our strategic partnerships, Club Kitchen
+            centralized tablet. Through our strategic partnerships, EmyrRam
             provides operators with cutting-edge POS technology while allowing you
             to save significantly on monthly costs. You'll be in complete control of
             your data including payment solutions, order tracking & more.`

@@ -38,7 +38,7 @@ const Section01 = (): JSX.Element => {
           variant="medium"
           text={t(
             'kitchens.section.1.1a.text',
-            `Club Kitchen’s in-house concierge team is here to assist with your order
+            `EmyrRam’s in-house concierge team is here to assist with your order
             management and fulfillment. Run with a smaller back-of-house team and
             save on labour costs – we'll handle all the front-of-house operations
             like food hand-offs, logistics, building services & maintenance, and

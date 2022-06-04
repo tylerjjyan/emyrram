@@ -24,7 +24,7 @@ const SectionFour = (): JSX.Element => {
           variant="medium"
           text={t(
             'kitchens.section.4.1a.text',
-            `We’d love to tell you more about what Club Kitchen can offer your
+            `We’d love to tell you more about what EmyrRam can offer your
           growing business. Get in touch with us today for inquiries about
           pricing, getting started, or anything else you might be curious about.`
           )}

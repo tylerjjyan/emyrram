@@ -74,7 +74,7 @@ export const vars = createGlobalTheme(':root', {
     mobileHeight: '76px'
   },
   footer: {
-    height: '305px',
+    height: '285px',
     mobileHeight: '395px'
   },
   breakpoints: {

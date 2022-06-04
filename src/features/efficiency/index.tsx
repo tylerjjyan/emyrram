@@ -26,11 +26,11 @@ const Efficiency = (): JSX.Element => {
       }}
       title={t(
         'efficiency.head.title',
-        `Club Kitchen | Commercial and Commissary Kitchen Vancouver`
+        `EmyrRam | Commercial and Commissary Kitchen Vancouver`
       )}
       description={t(
         'efficiency.head.text',
-        `Club Kitchen will handle all front-of-house operations - order logistics,
+        `EmyrRam will handle all front-of-house operations - order logistics,
         food hand-offs, building services. So you can focus on cooking & growing
         your business.`
       )}

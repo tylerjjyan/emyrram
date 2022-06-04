@@ -15,7 +15,7 @@ const ThankYouContent = (): JSX.Element => {
       <div>
         <Heading
           variant="h2"
-          text="Thank you for your interest in Club Kitchen!"
+          text="Thank you for your interest in EmyrRam!"
           marginBottom="16px"
           style={textSprinkles({ typeSize: ['h2', 'h4'] })}
         />

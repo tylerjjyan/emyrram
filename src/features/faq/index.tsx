@@ -16,11 +16,11 @@ const FAQ = (): JSX.Element => {
     <Layout
       title={t(
         'faq.head.title',
-        `Club Kitchen | About Vancouver's Premier Commissary Kitchen`
+        `EmyrRam | About Vancouver's Premier Commissary Kitchen`
       )}
       description={t(
         'faq.head.text',
-        `Got questions about Club Kitchen? Find out how this commissary kitchen in
+        `Got questions about EmyrRam? Find out how this commissary kitchen in
         Vancouver will take food service to the next level with its move-in ready
         kitchens.`
       )}

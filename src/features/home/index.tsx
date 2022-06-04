@@ -48,26 +48,6 @@ const Home = (): JSX.Element => {
       <AnimateIn>
         <SectionFour />
       </AnimateIn>
-      <PageSection
-        customStyle={sprinkles({
-          paddingRight: ['60px', '0px', '32px'],
-          paddingLeft: ['152px', '72px', '32px', '24px'],
-          paddingY: ['128px', '80px', '64px', '64px']
-        })}
-      >
-        <SectionFive />
-      </PageSection>
-      <PageSection
-        customStyle={sprinkles({
-          paddingX: ['64px', '64px', '24px', '24px'],
-          paddingBottom: ['80px', '48px', '48px', '24px']
-        })}
-      >
-        <AnimateIn>
-          <SectionSix />
-        </AnimateIn>
-      </PageSection>
-      <ContactUsSidebar isOpen={isFormOpen} toggleSidebar={toggleForm} />
     </Layout>
   )
 }

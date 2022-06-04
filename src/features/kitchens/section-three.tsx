@@ -16,7 +16,7 @@ const SectionThree = (): JSX.Element => {
           variant="h2"
           text={t(
             'kitchens.section.3.1a.title',
-            'Club Kitchen vs Traditional Restaurants'
+            'EmyrRam vs Traditional Restaurants'
           )}
           marginBottom="16px"
           textAlign="center"

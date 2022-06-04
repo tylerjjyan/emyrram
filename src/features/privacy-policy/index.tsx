@@ -351,12 +351,12 @@ const PrivacyPolicy = (): JSX.Element => {
         <Paragraph
           variant="medium"
           marginBottom="32px"
-          text={`This is the online Privacy Policy of Club Kitchen Management Inc. (“we”,
-            “us” or “Club Kitchen”). This Privacy Policy describes how your Personal
+          text={`This is the online Privacy Policy of EmyrRam Management Inc. (“we”,
+            “us” or “EmyrRam”). This Privacy Policy describes how your Personal
             Information is collected, used, and shared when you visit
             www.clubkitchen.ca (the “Site”) and applies only to information
-            collected by Club Kitchen through the Site and does not apply to
-            information collected by Club Kitchen otherwise. For the purpose of this
+            collected by EmyrRam through the Site and does not apply to
+            information collected by EmyrRam otherwise. For the purpose of this
             Privacy Policy, the term "Personal Information" includes any information
             that identifies you as an individual such as your name, personal
             address, telephone number and e-mail address.`}

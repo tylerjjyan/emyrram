@@ -29,11 +29,11 @@ const Section01 = (): JSX.Element => {
           text={t(
             'efficiency.section.2.1a.text',
             `In addition to providing a premier address with plenty of walk-in
-            traffic, Club Kitchen has partnered with top food-delivery service
+            traffic, EmyrRam has partnered with top food-delivery service
             providers like Uber Eats, DoorDash, and SkipTheDishes. This means access
             to over 100,000 potential customers within a 3km delivery radius,
             ensuring fresher food and lower delivery costs thanks to reduced travel
-            time. Club Kitchen has also partnered with industry-leading service
+            time. EmyrRam has also partnered with industry-leading service
             providers like Sysco, Gordon Food Service, Foodbuy Canada, and more to
             offer preferred pricing and cost savings to help lower your operating
             expenses.`

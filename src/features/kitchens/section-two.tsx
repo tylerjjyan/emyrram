@@ -24,7 +24,7 @@ const SectionTwo = (): JSX.Element => {
         'kitchens.section.2.2a.text',
         `Navigating the construction process is one of the hardest parts of
         opening a restaurant, and it can take up to 6+ months just to secure
-        permits. All this has already been taken care of at Club Kitchen. Our
+        permits. All this has already been taken care of at EmyrRam. Our
         kitchens are already built and ready for you to move in.`
       ),
       icon: RedTapeSVG

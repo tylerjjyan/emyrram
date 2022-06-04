@@ -7,6 +7,7 @@ export const contentWrapper = style({
   justifyContent: 'center',
   height: '100%',
   backgroundImage: `url(${HeroBackground})`,
+  backgroundSize: 'cover',
   padding: '40px 90px',
   '@media': {
     'screen and (max-width: 767px)': {

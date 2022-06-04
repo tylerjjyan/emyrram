@@ -20,11 +20,11 @@ const Kitchens = (): JSX.Element => {
       headerConfig={{ background: 'transparent', position: 'fixed' }}
       title={t(
         'kitchens.head.title',
-        `Club Kitchen | Commissary Kitchen For Rent Vancouver`
+        `EmyrRam | Commissary Kitchen For Rent Vancouver`
       )}
       description={t(
         'kitchens.head.text',
-        `Club Kitchen’s purpose-built kitchens make it quick & easy to create the
+        `EmyrRam’s purpose-built kitchens make it quick & easy to create the
         food you’ve dreamed of. Equipped with all appliances, open your kitchen 7
         days or less.`
       )}

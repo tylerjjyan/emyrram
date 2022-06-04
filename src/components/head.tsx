@@ -22,11 +22,11 @@ const Head: React.FC<HeadProps> = props => {
   const { t } = useTranslation()
   const defaultTitle = t(
     'component.head.title',
-    'Club Kitchen | Premier Commissary Kitchen Vancouver'
+    'EmyrRam | Best Chips in Canada'
   )
   const defaultDescription = t(
     'component.head.text',
-    `Club Kitchen is the ultimate commissary kitchen in Vancouver. From
+    `EmyrRam is the ultimate commissary kitchen in Vancouver. From
     logistics to order fulfilment, everything's taken care of so your time
     is spent on cooking.`
   )
@@ -127,7 +127,7 @@ const Head: React.FC<HeadProps> = props => {
           __html: `{
             "@type": "Accommodation",
             "additionalType" : "http://www.productontology.org/id/Condominium",
-            "name" : "Club Kitchen",
+            "name" : "EmyrRam",
             "description" : "Concord Sky is poised to be one of the tallest residential towers in Canada. Live at the epicentre of Toronto on Yonge Street with unparalleled convenience.",
             "address": {
               "@type": "PostalAddress",

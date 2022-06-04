@@ -10,7 +10,7 @@ const FAQSection = (): JSX.Element => {
       title: t('faq.section.1.1a.title', 'How does it work?'),
       content: t(
         'faq.section.1.1a.text',
-        `Club Kitchen provides you with a fully functional turn-key kitchen space
+        `EmyrRam provides you with a fully functional turn-key kitchen space
         outfitted with major appliances and the technology to receive orders on a
         single tablet. You do what you do best and worry about cooking great food.
         Our FOH team will handle all of the logistics and order hand-off
@@ -34,16 +34,16 @@ const FAQSection = (): JSX.Element => {
     {
       title: t(
         'faq.section.1.3a.title',
-        'What benefits to Club Kitchen Members enjoy?'
+        'What benefits to EmyrRam Members enjoy?'
       ),
       content: t(
         'faq.section.1.3a.text',
         `By working with our industry partners and combining the purchasing power
-        of multiple operations under a single roof, Club Kitchen has negotiated
+        of multiple operations under a single roof, EmyrRam has negotiated
         preferred pricing for services like 3rd Party Delivery Commission Fees,
         Sysco and GFS specialty pricing programs, Purchase Rebate Programs,
         Janitorial, Waste Removal, Smallwares Packages from Russel Hendrix, Repair
-        & Maintenance programs, and more. By working together Club Kitchen can
+        & Maintenance programs, and more. By working together EmyrRam can
         offer significantly lower operating costs to our individual members.`
       )
     },
@@ -54,7 +54,7 @@ const FAQSection = (): JSX.Element => {
         `We encourage all of our members to work with our partners Uber Eats, Skip
         the Dishes, and DoorDash to reach as many new customers as possible. We
         will also have a direct ordering link to each of our members ordering
-        platforms embedded within our Club Kitchen website, which we will be
+        platforms embedded within our EmyrRam website, which we will be
         actively marketing on your behalf.`
       )
     },

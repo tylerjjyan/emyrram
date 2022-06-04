@@ -19,7 +19,7 @@ const ComparisonAccordion = (): JSX.Element => {
           <div className={textWrapper}>
             <Paragraph
               variant="medium"
-              text={t('kitchens.section.3.2a.title', `Club Kitchen`)}
+              text={t('kitchens.section.3.2a.title', `EmyrRam`)}
             />
             <Heading
               variant="h6"
@@ -52,7 +52,7 @@ const ComparisonAccordion = (): JSX.Element => {
           <div className={textWrapper}>
             <Paragraph
               variant="medium"
-              text={t('kitchens.section.3.2a.title', `Club Kitchen`)}
+              text={t('kitchens.section.3.2a.title', `EmyrRam`)}
             />
             <Heading
               variant="h6"
@@ -85,7 +85,7 @@ const ComparisonAccordion = (): JSX.Element => {
           <div className={textWrapper}>
             <Paragraph
               variant="medium"
-              text={t('kitchens.section.3.2a.title', `Club Kitchen`)}
+              text={t('kitchens.section.3.2a.title', `EmyrRam`)}
             />
             <Heading
               variant="h6"
@@ -118,7 +118,7 @@ const ComparisonAccordion = (): JSX.Element => {
           <div className={textWrapper}>
             <Paragraph
               variant="medium"
-              text={t('kitchens.section.3.2a.title', `Club Kitchen`)}
+              text={t('kitchens.section.3.2a.title', `EmyrRam`)}
             />
             <Heading
               variant="h6"
@@ -151,7 +151,7 @@ const ComparisonAccordion = (): JSX.Element => {
           <div className={textWrapper}>
             <Paragraph
               variant="medium"
-              text={t('kitchens.section.3.2a.title', `Club Kitchen`)}
+              text={t('kitchens.section.3.2a.title', `EmyrRam`)}
             />
             <div className={columnWrapper}>
               <Heading
