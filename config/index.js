@@ -14,7 +14,8 @@ const config = {
   development: {
     BACKEND_URL: 'https://turtle.dev.k8s.concordswift.com',
     CDN_URL: 'https://drt4kfy6qmaeq.cloudfront.net/',
-    FRONTEND_URL: 'https://emyrram.ca'    isDev: true
+    FRONTEND_URL: 'https://emyrram.ca',
+    isDev: true
   },
   demo: {
     BACKEND_URL: 'https://turtle-demo.machobear.ca',
@@ -25,7 +26,8 @@ const config = {
   production: {
     BACKEND_URL: 'https://be.concordmetrotown.com',
     CDN_URL: 'https://cdn.concordsites.com/club-kitchen/',
-    FRONTEND_URL: 'https://emyrram.ca'  }
+    FRONTEND_URL: 'https://emyrram.ca'
+  }
 }
 
 export default {
