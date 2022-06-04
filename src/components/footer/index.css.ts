@@ -1,18 +1,35 @@
 import { vars } from '@/theme.css'
 import { globalStyle, style } from '@vanilla-extract/css'
 
-export const footerWrapper = style({
+export const wrapper = style({
   position: 'absolute',
   bottom: 0,
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  padding: '56px 64px',
-  background: vars.colors.black,
-
+  padding: '20px 90px',
+  background: vars.colors.background.dark,
+  transform: 'translateX(calc(50vw - 50%))',
+  maxWidth: 1400,
   '@media': {
     'screen and (max-width: 767px)': {
       padding: '56px 24px'
+    },
+
+    'screen and (max-width: 600px)': {
+      flexDirection: 'column'
+    }
+  }
+})
+
+export const footerWrapper = style({
+  display: 'flex',
+  flexDirection: 'row',
+  width: '100%',
+  marginBottom: 50,
+  '@media': {
+    'screen and (max-width: 600px)': {
+      flexDirection: 'column'
     }
   }
 })
@@ -65,5 +82,20 @@ export const emailLinkStyle = style({
   ':hover': {
     opacity: 0.7,
     transition: vars.transitions.opacity
+  }
+})
+
+export const description = style({
+  color: vars.colors.pureWhite
+})
+
+export const logoWrapper = style({
+  width: '50%',
+  paddingRight: 50,
+
+  '@media': {
+    'screen and (max-width: 600px)': {
+      width: '100%'
+    }
   }
 })

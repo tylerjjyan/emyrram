@@ -20,7 +20,7 @@ const CopyrightText = (): JSX.Element => {
         id="footer-privacy"
         rel="noopener noreferrer"
         target="_blank"
-        href="/privacy-policy"
+        href="/"
         className={customTextStyle}
       >
         <Paragraph
@@ -33,7 +33,7 @@ const CopyrightText = (): JSX.Element => {
         id="footer-terms"
         rel="noopener noreferrer"
         target="_blank"
-        href="/terms"
+        href="/"
         className={customTextStyle}
       >
         <Paragraph

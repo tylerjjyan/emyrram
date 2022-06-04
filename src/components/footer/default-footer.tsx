@@ -3,10 +3,12 @@ import { Paragraph } from '@/components/typography'
 import { vars } from '@/theme.css'
 import {
   footerWrapper,
-  upperWrapper,
+  wrapper,
   contentWrapper,
   customTextStyle,
-  emailLinkStyle
+  emailLinkStyle,
+  description,
+  logoWrapper
 } from './index.css'
 import { ReactComponent as LogoSVG } from './icons/Logo.svg'
 import Socials from './socials'
@@ -15,49 +17,32 @@ import { useTranslation } from 'next-i18next'
 const DefaultFooter = (): JSX.Element => {
   const { t } = useTranslation()
   return (
-    <div className={footerWrapper}>
-      <div className={upperWrapper}>
-        <LogoSVG />
+    <div className={wrapper}>
+      <div className={footerWrapper}>
+        <div className={logoWrapper}>
+          <LogoSVG />
+          <p className={description}>
+            We believe that luxury can be enjoyed anytime, anywhere. We are
+            dedicated to creating and bringing you the most seductive gourmet
+            snacks… all made from the finest ingredients.
+          </p>
+        </div>
         <div className={contentWrapper}>
           <div>
             <Paragraph
-              variant="xSmall"
-              text={t('component.footer.location.text', 'Location')}
-              marginBottom="16px"
-              style={customTextStyle}
-              textColor={vars.colors.pureWhite}
-            />
-            <Paragraph
-              variant="xSmall"
-              text="89 Nelson St."
-              textColor={vars.colors.pureWhite}
-            />
-            <Paragraph
-              variant="xSmall"
-              text="Vancouver, BC"
-              textColor={vars.colors.pureWhite}
-            />
-            <Paragraph
-              variant="xSmall"
-              text="V6Z 0E7"
-              textColor={vars.colors.pureWhite}
-            />
-          </div>
-          <div>
-            <Paragraph
-              variant="xSmall"
+              variant="medium"
               text={t('component.footer.contact_us.text', 'Contact Us')}
               marginBottom="16px"
               style={customTextStyle}
               textColor={vars.colors.pureWhite}
             />
             <a
-              href="mailto:info@clubkitchen.ca?subject=[Info Request] EmyrRam"
+              href="mailto:info@emyrram.ca?subject=[Info Request] EmyrRam"
               className={emailLinkStyle}
             >
               <Paragraph
                 variant="xSmall"
-                text="Email: info@clubkitchen.ca"
+                text="Email: info@emyrram.ca"
                 textColor={vars.colors.pureWhite}
               />
             </a>
