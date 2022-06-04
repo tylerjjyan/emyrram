@@ -57,7 +57,8 @@ const nextConfig = {
     disableStaticImages: true
   },
   basePath: process.env.APP_PATH || '',
-  assetPrefix: process.env.APP_PATH || ''
+  assetPrefix: process.env.APP_PATH || '',
+  outputFileTracing: false
 }
 
 module.exports = withPlugins(
