@@ -81,3 +81,11 @@ export const title = style({
     }
   }
 })
+
+export const button = style({
+  width: 'fit-content',
+  background: '#D8A31C',
+  padding: 12,
+  borderRadius: 8,
+  color: 'white'
+})
