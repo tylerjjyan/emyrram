@@ -17,16 +17,10 @@ const Home = (): JSX.Element => {
   return (
     <Layout path="/">
       <HeroSection />
-      <PageSection
-        customStyle={sprinkles({
-          paddingX: ['152px', '72px', '48px', '24px'],
-          paddingY: ['128px', '80px', '64px', '64px']
-        })}
-      >
-        <AnimateIn>
-          <SectionOne />
-        </AnimateIn>
-      </PageSection>
+
+      <AnimateIn>
+        <SectionOne />
+      </AnimateIn>
       <PageSection
         customStyle={sprinkles({
           paddingX: ['152px', '72px', '48px', '24px'],

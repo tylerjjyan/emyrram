@@ -1,46 +1,31 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 import { vars } from '@/theme.css'
-import HeroImage from '@/components/hero-image'
 import { Heading, Paragraph, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
 import { useContactForm } from '@/hooks/use-contact-form'
 import Hero from '@/images/home/home.hero.png'
-import { heroTextWrapper } from './hero.css'
+import { heroTextWrapper, heroWrapper, heroImage } from './hero.css'
 
 const HeroSection = (): JSX.Element => {
   const { t } = useTranslation()
   const { setIsFormOpen } = useContactForm()
+
   return (
     <>
-      <HeroImage src={Hero}>
+      <div className={heroWrapper}>
         <div className={heroTextWrapper}>
           <Heading
             variant="h1"
             textColor={vars.colors.pureWhite}
             text={t(
               'home.hero.1.1a.title',
-              'Next generation food service has arrived'
+              'A taste of Canada’s best potato chips'
             )}
             marginBottom="16px"
             style={textSprinkles({
               fontSize: ['h1', 'h3'],
               lineHeight: ['h1', 'h3']
-            })}
-          />
-          <Paragraph
-            variant="large"
-            textColor={vars.colors.pureWhite}
-            text={t(
-              'home.hero.1.1a.text',
-              `Club Kitchen was designed to help restaurant owners like you achieve your
-          goals faster through technology and turnkey solutions with our move-in
-          ready kitchens.`
-            )}
-            style={textSprinkles({
-              fontSize: ['large', 'medium'],
-              lineHeight: ['large', 'medium'],
-              marginBottom: ['48px', '40px']
             })}
           />
           <ArrowButton
@@ -51,7 +36,8 @@ const HeroSection = (): JSX.Element => {
             onClick={() => setIsFormOpen(true)}
           />
         </div>
-      </HeroImage>
+        <img src={Hero} className={heroImage} />
+      </div>
     </>
   )
 }

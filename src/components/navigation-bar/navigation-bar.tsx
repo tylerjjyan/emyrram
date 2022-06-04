@@ -23,16 +23,16 @@ const NavigationBar: React.FC<NavigationProps> = ({
 
   const routes = [
     {
-      href: '/efficiency',
-      name: t('component.navigation_bar.efficiency.title', 'Efficiency')
+      href: '/shop-online',
+      name: t('component.navigation_bar.shop-online.title', 'Shop Online')
     },
     {
-      href: '/kitchens',
-      name: t('component.navigation_bar.kitchens.title', 'Kitchens')
+      href: '/about',
+      name: t('component.navigation_bar.about.title', 'About')
     },
     {
-      href: '/faq',
-      name: t('component.navigation_bar.faq.title', 'FAQ')
+      href: '/contact',
+      name: t('component.navigation_bar.contact.title', 'Contact')
     }
   ]
 

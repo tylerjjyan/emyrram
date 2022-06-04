@@ -3,7 +3,7 @@ import { vars } from '@/theme.css'
 
 export const heroWrapper = style({
   position: 'relative',
-  height: '100vh',
+  height: '80vh',
   width: '100vw'
 })
 
@@ -14,7 +14,12 @@ export const image = style({
   width: '100%',
   height: '100%',
   objectFit: 'cover',
-  objectPosition: 'center',
+  objectPosition: 'right',
   transition: vars.transitions.opacity,
-  zIndex: 1
+  zIndex: 1,
+  '@media': {
+    'screen and (max-width: 767px)': {
+      objectPosition: 'center'
+    }
+  }
 })

@@ -54,7 +54,8 @@ const responsiveProperties = defineProperties({
     fontFamily: vars.fonts,
     fontSize: vars.fontSizes,
     lineHeight: vars.lineHeights,
-    textAlign: ['center', 'left', 'right']
+    textAlign: ['center', 'left', 'right'],
+    maxWidth: ['unset']
   },
   shorthands: {
     padding: ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'],

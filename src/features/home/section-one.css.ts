@@ -2,14 +2,8 @@ import { style } from '@vanilla-extract/css'
 
 export const sectionWrapper = style({
   display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      flexDirection: 'column'
-    }
-  }
+  maxHeight: 500,
+  minHeight: 200
 })
 
 export const textWrapper = style({
@@ -34,7 +28,7 @@ export const imageStyle = style({
   width: '100%',
   height: '100%',
   minHeight: '362px',
-  objectFit: 'contain',
+  objectFit: 'cover',
 
   '@media': {
     'screen and (max-width: 767px)': {

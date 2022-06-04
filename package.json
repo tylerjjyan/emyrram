@@ -49,6 +49,7 @@
     "stringify": "^5.2.0",
     "svgo-loader": "^3.0.0",
     "video.js": "^7.18.1",
+    "vscode": "^1.1.37",
     "yup": "^0.32.11"
   },
   "devDependencies": {

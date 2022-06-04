@@ -4,7 +4,7 @@ import { defaultStyle } from './index.css'
 
 interface ImageProps {
   src: string
-  mobileSrc: string
+  mobileSrc?: string
   alt: string
   customStyle?: string
 }

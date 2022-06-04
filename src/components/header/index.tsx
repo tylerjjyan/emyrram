@@ -8,9 +8,10 @@ import {
   header,
   HeaderVariants,
   navigationWrapper,
-  customButtonStyle
+  customButtonStyle,
+  cartWrapper
 } from './index.css'
-import { ReactComponent as LogoWhiteSVG } from './icons/logo.svg'
+import { ReactComponent as LogoWhiteSVG } from './logo.svg'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
 import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
@@ -34,7 +35,7 @@ const HEADER_CONFIG = {
     menu: MenuWhiteSVG
   },
   primary: {
-    logo: LogoDarkSVG,
+    logo: LogoWhiteSVG,
     languageButtonConfig: 'dark',
     navigationConfig: 'dark',
     buttonConfig: { type: 'primary', size: 'large' },
@@ -113,22 +114,17 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
           {displayMobile ? (
             <div className={navigationWrapper}>
               <MenuSVG onClick={() => setIsOpen(true)} />
-              <LanguageSwitcher theme={languageButtonVariant} />
+              {/* <LanguageSwitcher theme={languageButtonVariant} /> */}
             </div>
           ) : (
-            <div className={navigationWrapper}>
-              <NavigationBar colorTheme={navigationVariant} />
-              {isButtonVisible && (
-                <Button
-                  variant={buttonVariant}
-                  text={t('component.header.contact_us.text', 'Contact Us')}
-                  customStyle={customButtonStyle}
-                  onClick={() => setIsSidebarOpen(true)}
-                  id="club-kitchen-contact-us-menu"
-                />
-              )}
-              <LanguageSwitcher theme={languageButtonVariant} />
-            </div>
+            <>
+              <div className={navigationWrapper}>
+                <NavigationBar colorTheme={navigationVariant} />
+
+                {/* <LanguageSwitcher theme={languageButtonVariant} /> */}
+              </div>
+              <p className={cartWrapper}>Cart</p>
+            </>
           )}
         </div>
       )}

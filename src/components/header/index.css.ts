@@ -53,7 +53,6 @@ export const header = recipe({
     padding: '24px 64px',
     zIndex: vars.zIndex.header,
     transition: 'background 0.5s ease-in-out',
-
     '@media': {
       'screen and (max-width: 767px)': {
         padding: '24px'
@@ -100,7 +99,7 @@ export const header = recipe({
 
 export const logoWrapper = style({
   cursor: 'pointer',
-
+  flex: 1,
   '@media': {
     'screen and (max-width: 599px)': {
       transform: 'scale(0.7)'
@@ -117,7 +116,19 @@ export type HeaderVariants = RecipeVariants<typeof header>
 
 export const navigationWrapper = style({
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
+  justifyContent: 'center',
+  flex: 1,
+  '@media': {
+    'screen and (max-width: 767px)': {
+      justifyContent: 'flex-end'
+    }
+  }
+})
+
+export const cartWrapper = style({
+  textAlign: 'right',
+  flex: 1
 })
 
 export const customButtonStyle = style({

@@ -26,7 +26,7 @@ export const vars = createGlobalTheme(':root', {
     link: '#1d74dc'
   },
   fonts: {
-    heading: 'neue-haas-grotesk-display',
+    heading: 'PT Serif',
     body: 'lato'
   },
   lineHeights: {

@@ -1,5 +1,6 @@
 import { vars } from '@/theme.css'
-import { keyframes, style } from '@vanilla-extract/css'
+import { keyframes, style, globalStyle } from '@vanilla-extract/css'
+import HeroBackground from '@/images/home/home.hero-background.png'
 
 const appear = keyframes({
   '0%': {
@@ -17,19 +18,57 @@ const appear = keyframes({
   }
 })
 
-export const heroTextWrapper = style({
-  position: 'absolute',
-  top: '50%',
-  left: 0,
-  transform: 'translate(0, -50%)',
-  padding: '0px 32px',
-  maxWidth: '720px',
-  zIndex: vars.zIndex.hero,
-  animation: `${appear} 1s`,
+export const heroWrapper = style({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
 
+  height: '80vh',
+  overflow: 'hidden',
+  backgroundImage: `url(${HeroBackground})`,
+  padding: '0px 40px',
   '@media': {
-    'screen and (max-width: 767px)': {
-      padding: '0px 24px'
+    'screen and (max-width: 935px)': {
+      flexDirection: 'column',
+      padding: '0px',
+      paddingTop: vars.header.height
     }
+  }
+})
+
+export const heroTextWrapper = style({
+  maxWidth: '720px',
+  animation: `${appear} 1s`,
+  flex: 0.8,
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  '@media': {
+    'screen and (max-width: 935px)': {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      minHeight: '30%'
+    }
+  }
+})
+
+globalStyle(`${heroTextWrapper} > p`, {
+  '@media': {
+    'screen and (max-width: 935px)': {
+      textAlign: 'center'
+    }
+  }
+})
+
+export const heroImage = style({
+  flex: 1,
+  width: '100%',
+  transform: 'translateY(25%)',
+  objectFit: 'contain',
+  maxWidth: 800,
+  '@media': {
+    'screen and (max-width: 935px)': {}
   }
 })
