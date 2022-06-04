@@ -39,7 +39,7 @@ export const itemWrapper = style({
   '@media': {
     'screen and (max-width: 850px)': {
       width: '100%',
-      margin: '0 0 20px 0'
+      margin: '0 0 40px 0'
     }
   }
 })

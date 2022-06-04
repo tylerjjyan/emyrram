@@ -30,8 +30,8 @@ export const heroWrapper = style({
   '@media': {
     'screen and (max-width: 935px)': {
       flexDirection: 'column',
-      padding: '0px',
-      paddingTop: vars.header.height
+      justifyContent: 'flex-end',
+      alignItems: 'center'
     }
   }
 })
@@ -39,36 +39,45 @@ export const heroWrapper = style({
 export const heroTextWrapper = style({
   maxWidth: '720px',
   animation: `${appear} 1s`,
-  flex: 0.8,
   display: 'flex',
+  width: '50%',
   justifyContent: 'center',
   flexDirection: 'column',
   '@media': {
     'screen and (max-width: 935px)': {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      minHeight: '30%'
-    }
-  }
-})
-
-globalStyle(`${heroTextWrapper} > p`, {
-  '@media': {
-    'screen and (max-width: 935px)': {
-      textAlign: 'center'
+      width: '100%',
+      alignItems: 'center'
     }
   }
 })
 
 export const heroImage = style({
-  flex: 1,
-  width: '100%',
+  width: '50%',
   transform: 'translateY(25%)',
   objectFit: 'contain',
   maxWidth: 800,
   '@media': {
-    'screen and (max-width: 935px)': {}
+    'screen and (max-width: 935px)': {
+      width: '100vw',
+      maxWidth: 600,
+      maxHeight: '60%',
+      objectFit: 'cover',
+      objectPosition: 'top',
+      transform: 'translateY(15%)'
+    }
+  }
+})
+
+export const title = style({
+  color: vars.colors.pureWhite,
+  fontFamily: 'DM Serif Display',
+  fontSize: 60,
+  lineHeight: '60px',
+  '@media': {
+    'screen and (max-width: 935px)': {
+      textAlign: 'center',
+      fontSize: 40,
+      lineHeight: '42px'
+    }
   }
 })
