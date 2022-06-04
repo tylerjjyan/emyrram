@@ -10,7 +10,7 @@ import {
   description,
   logoWrapper
 } from './index.css'
-import { ReactComponent as LogoSVG } from './icons/logo.svg'
+import { ReactComponent as LogoSVG } from './logo.svg'
 import Socials from './socials'
 import { useTranslation } from 'next-i18next'
 
