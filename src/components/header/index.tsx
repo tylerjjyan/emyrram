@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from 'react'
-import NavigationBar, { NavigationBarType } from '@/components/navigation-bar'
 import useEventListener from '@/hooks/use-event-listener'
 import useMediaQuery from '@/hooks/use-media-query'
 import FullScreenHeader from './fullscreen-header'
@@ -7,10 +6,12 @@ import {
   header,
   HeaderVariants,
   navigationWrapper,
-  cartWrapper
+  cartStyle
 } from './index.css'
 import { ReactComponent as LogoWhiteSVG } from './logo.svg'
 import { ReactComponent as LogoDarkSVG } from './icons/logo-dark.svg'
+import { ReactComponent as CartWhiteSVG } from './cart.svg'
+import { ReactComponent as CartDarkSVG } from './cart-dark.svg'
 import { ReactComponent as MenuWhiteSVG } from './icons/menu.svg'
 import { ReactComponent as MenuDarkSVG } from './icons/menu-dark.svg'
 import ContactUsSidebar from '@/features/contact-us'
@@ -28,21 +29,24 @@ const HEADER_CONFIG = {
     languageButtonConfig: 'light',
     navigationConfig: 'light',
     buttonConfig: { type: 'secondary', size: 'large' },
-    menu: MenuWhiteSVG
+    menu: MenuWhiteSVG,
+    cart: CartWhiteSVG
   },
   primary: {
     logo: LogoWhiteSVG,
     languageButtonConfig: 'dark',
     navigationConfig: 'dark',
     buttonConfig: { type: 'primary', size: 'large' },
-    menu: MenuDarkSVG
+    menu: MenuDarkSVG,
+    cart: CartDarkSVG
   },
   secondary: {
     logo: LogoDarkSVG,
     languageButtonConfig: 'dark',
     navigationConfig: 'dark',
     buttonConfig: { type: 'primary', size: 'large' },
-    menu: MenuDarkSVG
+    menu: MenuDarkSVG,
+    cart: CartDarkSVG
   }
 }
 
@@ -57,9 +61,7 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   const isTransparent = config?.background === 'transparent'
 
   const headerInfo = HEADER_CONFIG[forceTheme || 'transparent']
-  const { logo: LogoSVG, navigationConfig, menu: MenuSVG } = headerInfo
-
-  const navigationVariant = navigationConfig as NavigationBarType
+  const { logo: LogoSVG, cart: CartSVG } = headerInfo
 
   const pastOffset = useCallback(() => {
     const offset = displayMobile ? 15 : 125
@@ -98,21 +100,15 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
       {!isOpen && (
         <div className={header({ ...restConfig, background: forceTheme })}>
           <Logo logoIcon={LogoSVG}></Logo>
-          {displayMobile ? (
+
+          <>
             <div className={navigationWrapper}>
-              <MenuSVG onClick={() => setIsOpen(true)} />
+              {/* <NavigationBar colorTheme={navigationVariant} /> */}
+
               {/* <LanguageSwitcher theme={languageButtonVariant} /> */}
             </div>
-          ) : (
-            <>
-              <div className={navigationWrapper}>
-                <NavigationBar colorTheme={navigationVariant} />
-
-                {/* <LanguageSwitcher theme={languageButtonVariant} /> */}
-              </div>
-              <p className={cartWrapper}>Cart</p>
-            </>
-          )}
+            <CartSVG className={cartStyle} />
+          </>
         </div>
       )}
       {displayMobile && isOpen && <FullScreenHeader setIsOpen={setIsOpen} />}

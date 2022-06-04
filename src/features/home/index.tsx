@@ -15,7 +15,10 @@ import ContactUsSidebar from '../contact-us'
 const Home = (): JSX.Element => {
   const { isFormOpen, toggleForm } = useContactForm()
   return (
-    <Layout path="/">
+    <Layout
+      path="/"
+      headerConfig={{ background: 'transparent', position: 'fixed' }}
+    >
       <HeroSection />
 
       <AnimateIn>

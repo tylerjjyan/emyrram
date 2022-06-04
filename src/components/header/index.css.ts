@@ -102,7 +102,7 @@ export const logoWrapper = style({
   flex: 1,
   '@media': {
     'screen and (max-width: 599px)': {
-      transform: 'scale(0.7)'
+      transform: 'scale(0.8)'
     }
   },
 
@@ -141,4 +141,8 @@ export const customButtion = style({
 
 export const contentWrapper = style({
   padding: '32px 24px'
+})
+
+export const cartStyle = style({
+  cursor: 'not-allowed'
 })

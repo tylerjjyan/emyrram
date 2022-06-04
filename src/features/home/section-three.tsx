@@ -19,7 +19,7 @@ import Chip1 from '@/images/home/home.section.3.1a.png'
 const SectionThree = (): JSX.Element => {
   const { t } = useTranslation()
   return (
-    <div className={wrapper}>
+    <div id="shop" className={wrapper}>
       <div className={itemWrapper}>
         <img src={Chip1} className={itemImage} />
         <p className={itemName}>Original</p>

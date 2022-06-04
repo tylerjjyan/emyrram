@@ -1,16 +1,19 @@
 import React from 'react'
 import { useTranslation } from 'next-i18next'
 import { vars } from '@/theme.css'
-import { Heading, Paragraph, textSprinkles } from '@/components/typography'
+import { Heading, textSprinkles } from '@/components/typography'
 import { ArrowButton } from '@/components/button'
-import { useContactForm } from '@/hooks/use-contact-form'
 import Hero from '@/images/home/home.hero.png'
 import { heroTextWrapper, heroWrapper, heroImage } from './hero.css'
 
 const HeroSection = (): JSX.Element => {
   const { t } = useTranslation()
-  const { setIsFormOpen } = useContactForm()
 
+  const goToViolation = () => {
+    const shop = document.getElementById('shop')
+
+    shop?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
   return (
     <>
       <div className={heroWrapper}>
@@ -33,7 +36,7 @@ const HeroSection = (): JSX.Element => {
             id="club-kitchen-contact-us-hero"
             variant={{ type: 'secondary', size: 'large' }}
             arrowVariant="right"
-            onClick={() => setIsFormOpen(true)}
+            onClick={goToViolation}
           />
         </div>
         <img src={Hero} className={heroImage} />
