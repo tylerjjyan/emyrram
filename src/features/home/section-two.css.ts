@@ -18,14 +18,21 @@ export const headerText = style({
   color: vars.colors.pureWhite,
   fontSize: 34,
   textAlign: 'center',
-  marginBottom: 10
+  marginBottom: 10,
+  '@media': {
+    'screen and (max-width: 767px)': {
+      marginBottom: 20
+    }
+  }
 })
 
 export const bodyText = style({
   color: vars.colors.pureWhite,
-  fontSize: vars.fontSizes.large,
+  fontSize: 16,
   textAlign: 'center',
-  margin: 0
+  margin: 0,
+  fontWeight: 0,
+  fontFamily: 'PT Serif'
 })
 
 export const textWrapper = style({
