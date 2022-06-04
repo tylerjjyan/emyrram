@@ -1,14 +1,31 @@
+import { vars } from '@/theme.css'
 import { style } from '@vanilla-extract/css'
 
 export const sectionWrapper = style({
   display: 'flex',
-  justifyContent: 'space-between',
-
+  flexDirection: 'column',
+  alignItems: 'center',
+  maxWidth: 885,
+  margin: 'auto',
   '@media': {
     'screen and (max-width: 767px)': {
       flexDirection: 'column'
     }
   }
+})
+
+export const headerText = style({
+  color: vars.colors.pureWhite,
+  fontSize: 34,
+  textAlign: 'center',
+  marginBottom: 10
+})
+
+export const bodyText = style({
+  color: vars.colors.pureWhite,
+  fontSize: vars.fontSizes.large,
+  textAlign: 'center',
+  margin: 0
 })
 
 export const textWrapper = style({

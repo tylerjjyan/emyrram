@@ -5,7 +5,7 @@ export const vars = createGlobalTheme(':root', {
     background: {
       white: '#FFFFFF',
       light: '#F8F8F8',
-      dark: '#303030',
+      dark: '#0B0B0B',
       darkest: '#28292B'
     },
     primary: {
@@ -26,8 +26,8 @@ export const vars = createGlobalTheme(':root', {
     link: '#1d74dc'
   },
   fonts: {
-    heading: 'PT Serif',
-    body: 'lato'
+    heading: 'DM Serif Display',
+    body: 'PT Serif'
   },
   lineHeights: {
     xSmall: '16px',

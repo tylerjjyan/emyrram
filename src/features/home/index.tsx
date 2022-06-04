@@ -26,7 +26,7 @@ const Home = (): JSX.Element => {
           paddingX: ['152px', '72px', '48px', '24px'],
           paddingY: ['128px', '80px', '64px', '64px']
         })}
-        backgroundTheme="light"
+        backgroundTheme="dark"
       >
         <AnimateIn>
           <SectionTwo />
@@ -34,28 +34,20 @@ const Home = (): JSX.Element => {
       </PageSection>
       <PageSection
         customStyle={sprinkles({
-          paddingRight: ['152px', '72px', '48px', '0px'],
+          paddingRight: ['152px', '72px', '48px', '24px'],
           paddingLeft: ['152px', '72px', '48px', '24px'],
-          paddingY: ['128px', '80px', '64px', '64px']
+          paddingY: ['80px', '80px', '64px', '64px']
         })}
+        backgroundTheme="dark"
       >
         <AnimateIn>
           <SectionThree />
         </AnimateIn>
       </PageSection>
-      <PageSection
-        customStyle={sprinkles({
-          paddingTop: ['0px', '0px', '64px', '64px'],
-          paddingRight: ['0px', '0px', '48px', '24px'],
-          paddingLeft: ['152px', '72px', '48px', '24px'],
-          paddingBottom: ['128px', '80px', '64px', '64px']
-        })}
-        backgroundTheme="light"
-      >
-        <AnimateIn>
-          <SectionFour />
-        </AnimateIn>
-      </PageSection>
+
+      <AnimateIn>
+        <SectionFour />
+      </AnimateIn>
       <PageSection
         customStyle={sprinkles({
           paddingRight: ['60px', '0px', '32px'],

@@ -1,55 +1,73 @@
 import { vars } from '@/theme.css'
 import { style } from '@vanilla-extract/css'
+import HeroBackground from '@/images/home/home.hero-background.png'
 
 export const contentWrapper = style({
   display: 'flex',
-  justifyContent: 'space-between',
-  height: '100%'
-})
-
-export const leftWrapper = style({
-  width: '100%',
-  maxWidth: '536px',
-  paddingTop: '128px',
-  marginRight: '24px',
-
-  '@media': {
-    'screen and (max-width: 767px)': {
-      marginRight: '0',
-      height: '100%',
-      maxWidth: 'unset',
-      padding: 0
-    }
-  }
-})
-
-export const imageWrapper = style({
-  width: '100%',
-  maxWidth: '670px',
+  justifyContent: 'center',
   height: '100%',
-  background: vars.colors.neutral10,
-  borderRadius: '0px 0px 0px 160px',
-
+  backgroundImage: `url(${HeroBackground})`,
+  padding: '40px 90px',
   '@media': {
     'screen and (max-width: 767px)': {
-      display: 'none'
+      padding: '50px 46px'
+    },
+    'screen and (max-width: 600px)': {
+      flexDirection: 'column-reverse',
+      padding: '50px 24px'
     }
   }
 })
 
-export const offerImageWrapper = style({
-  display: 'none',
-
+export const textWrapper = style({
+  display: 'flex',
+  flexDirection: 'column',
+  color: vars.colors.pureWhite,
+  width: '50%',
+  justifyContent: 'center',
+  maxWidth: 600,
   '@media': {
-    'screen and (max-width: 767px)': {
-      display: 'inline-block',
-      width: '100%',
-      height: '100%',
-      maxHeight: '400px',
-      background: vars.colors.neutral10,
-      borderRadius: '40px 0px 0px 0px',
-      objectFit: 'cover',
-      marginBottom: '24px'
+    'screen and (max-width: 600px)': {
+      width: '100%'
     }
   }
+})
+
+export const button = style({
+  borderRadius: 8,
+  background: vars.colors.neutral50,
+  height: 48,
+  color: vars.colors.pureWhite,
+  cursor: 'not-allowed',
+  width: 'fit-content',
+  padding: '0 20px',
+  marginTop: 20
+})
+
+export const imageStyle = style({
+  width: '50%',
+  objectFit: 'cover',
+  maxWidth: 600,
+  '@media': {
+    'screen and (max-width: 600px)': {
+      width: '100%'
+    }
+  }
+})
+
+export const title = style({
+  fontFamily: 'DM Serif Display',
+  fontSize: 34,
+  fontWeight: 400
+})
+
+export const description = style({
+  fontFamily: 'PT Serif',
+  fontSize: 16
+})
+
+export const warning = style({
+  fontFamily: 'PT Serif',
+  fontSize: 13,
+  fontStyle: 'italic'
 })
